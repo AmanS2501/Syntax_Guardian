@@ -1,0 +1,20 @@
+complexity:
+  warn_at: 12
+  p1_cutoff: 12
+  p0_cutoff: 14
+duplication:
+  k_shingle: 7
+  similarity_threshold: 0.87
+performance:
+  enabled: true
+documentation:
+  enabled: true
+testing:
+  enabled: true
+weights:
+  security: 1.0
+  complexity: 0.6
+  duplication: 0.5
+  performance: 0.65
+  documentation: 0.3
+  testing: 0.7
