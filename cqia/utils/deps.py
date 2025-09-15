@@ -21,29 +21,38 @@ def safe_dep_metrics(res: Dict[str, Any]) -> Dict[str, Any]:
         try:
             if isinstance(v, (list, tuple)):
                 if len(v) > 1:
-                    return int(v[1])
+                    return int(float(v[1]))
                 if len(v) == 1:
-                    return int(v)
+                    return int(float(v[0]))
                 return 0
-            return int(v)
+            return int(float(v))
         except Exception:
             return 0
 
-    fan_in = {str(k): _as_int(v) for k, v in fan_in.items()}
-    fan_out = {str(k): _as_int(v) for k, v in fan_out.items()}
+    # Ensure fan_in and fan_out are properly converted
+    fan_in_clean = {}
+    for k, v in fan_in.items():
+        fan_in_clean[str(k)] = _as_int(v)
+
+    fan_out_clean = {}
+    for k, v in fan_out.items():
+        fan_out_clean[str(k)] = _as_int(v)
 
     def _pairize(items) -> List[Tuple[str, int]]:
         out: List[Tuple[str, int]] = []
         for item in items:
             try:
-                n, v = item
+                if isinstance(item, (list, tuple)) and len(item) >= 2:
+                    n, v = item[0], item[1]
+                else:
+                    n, v = item, 0
+                out.append((str(n), _as_int(v)))
             except Exception:
-                n, v = item, 0
-            out.append((str(n), _as_int(v)))
+                out.append((str(item), 0))
         return out
 
-    metrics["fan_in"] = fan_in
-    metrics["fan_out"] = fan_out
+    metrics["fan_in"] = fan_in_clean
+    metrics["fan_out"] = fan_out_clean
     metrics["top_fan_in"] = _pairize(top_fan_in)
     metrics["top_fan_out"] = _pairize(top_fan_out)
     metrics["cycles"] = [[str(x) for x in cyc] for cyc in cycles]

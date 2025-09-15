@@ -1,19 +1,32 @@
-
 from __future__ import annotations
+
 from dotenv import load_dotenv
 load_dotenv()
+
 from pathlib import Path
 import subprocess
 import statistics
+import sys
 import typer
+
 from rich.console import Console
 from rich.table import Table
+
+# Core graph and QA
 from cqia.agent.graph.flow import build_cqia_graph
 from langchain_core.messages import HumanMessage
+
+# Dependency metrics helper
 from cqia.utils.deps import safe_dep_metrics as _safe_dep_metrics
 
+# Analysis pipeline
 from cqia.core.config import AnalyzeConfig
 from cqia.ingestion.walker import walk_repo
+from cqia.analysis.runner import run_analysis
+from cqia.presets import load_rules, save_rules
+from cqia.analysis.severity import override_weights
+
+# Reporting
 from cqia.reporting.markdown import (
     write_basic_report,
     append_top_issues,
@@ -23,32 +36,37 @@ from cqia.reporting.markdown import (
     append_dependencies,
     append_dependency_outline,
 )
-from cqia.analysis.runner import run_analysis
 from cqia.reporting.exporters import export_dependency_graph, export_json_report
-from cqia.presets import load_rules, save_rules
-from cqia.analysis.severity import override_weights
-from cqia.qa.chain import build_chatgroq_llm, answer_with_citations
-from cqia.rag.embeddings.vector_store import CodeEmbeddingManager
-from cqia.rag.retrieval.smart_retriever import FileAwareRetriever
-from cqia.analysis.runner import run_analysis
-from cqia.presets import load_rules
-from cqia.analysis.severity import override_weights
 
-# Day 3 imports
+# RAG pieces
+from cqia.qa.chain import build_chatgroq_llm, answer_with_citations
+from cqia.qa.artifacts import load_scope_findings
 from cqia.rag.chunking.ast_chunker import ASTFunctionChunker
 from cqia.rag.embeddings.vector_store import CodeEmbeddingManager
 from cqia.rag.retrieval.smart_retriever import FileAwareRetriever
 
+
 app = typer.Typer(add_completion=False, help="Code Quality Intelligence Agent (CQIA)")
 console = Console()
 
-# def _safe_dep_metrics(res: dict) -> dict:
-#     return res.get("dep_metrics") or res.get("dependencies", {}).get("metrics", {}) or {}
+
+def _clone_or_use(path_or_git: str, workdir: Path) -> Path:
+    p = Path(path_or_git)
+    if p.exists():
+        return p
+    # Sanitize trailing dot in repo name (Windows)
+    repo_name = Path(path_or_git).stem.rstrip(".") or "repo"
+    repo_dir = workdir / repo_name
+    if repo_dir.exists():
+        return repo_dir
+    subprocess.check_call(["git", "clone", "--depth", "1", path_or_git, str(repo_dir)])
+    return repo_dir
+
 
 def _detector_rationale_for_path(root: Path, include: list[str], exclude: list[str], max_bytes: int) -> str:
     """
-    Run a lightweight analysis to extract brief rationale strings that may help QA,
-    e.g., top complexity/duplication/security notes. Keep it short.
+    Run a lightweight analysis to extract brief rationale strings to aid QA.
+    Uses correct keys from ScoredFinding: file/start_line/end_line/title/category/severity.
     """
     try:
         rules = load_rules(Path("presets/rules.yaml"))
@@ -63,41 +81,30 @@ def _detector_rationale_for_path(root: Path, include: list[str], exclude: list[s
             dup_k=rules.get("duplication", {}).get("k_shingle", 7),
             dup_threshold=rules.get("duplication", {}).get("similarity_threshold", 0.90),
         )
-        snippets = []
+        snippets: list[str] = []
         for f in (results.get("findings_scored") or [])[:5]:
-            # Expect each f to have keys: category, severity, where/path, summary
             cat = f.get("category", "issue")
-            sev = f.get("severity", "info")
-            where = f.get("where", "")
-            summary = f.get("summary", "")
-            snippets.append(f"{cat} ({sev}) at {where}: {summary}")
+            sev = f.get("severity", "P3")
+            loc = f"{f.get('file','')}:{int(f.get('start_line',1))}-{int(f.get('end_line',1))}"
+            title = f.get("title", "Finding")
+            snippets.append(f"{cat} ({sev}) at {loc}: {title}")
         return "\n".join(snippets[:3]) if snippets else "No notable findings."
     except Exception:
         return "No notable findings."
 
 
-def _clone_or_use(path_or_git: str, workdir: Path) -> Path:
-    p = Path(path_or_git)
-    if p.exists():
-        return p
-    repo_name = Path(path_or_git).stem.rstrip(".") or "repo"
-    repo_dir = workdir / repo_name
-    if repo_dir.exists():
-        return repo_dir
-    subprocess.check_call(["git", "clone", "--depth", "1", path_or_git, str(repo_dir)])
-    return repo_dir
-
 @app.command("serve-api")
-def serve_api(host: str = "127.0.0.1", port: int = 8000):
+def serve_api(host: str = "127.0.0.1", port: int = 8000) -> None:
     """Run the FastAPI web service."""
     import uvicorn
     uvicorn.run("cqia.web.service:app", host=host, port=port, reload=False)
 
+
 @app.command("serve-ui")
-def serve_ui():
+def serve_ui() -> None:
     """Run the Streamlit UI."""
-    import subprocess, sys
     subprocess.run([sys.executable, "-m", "streamlit", "run", "cqia/web/ui_app.py"], check=True)
+
 
 @app.command("pr-comment")
 def pr_comment(
@@ -105,7 +112,7 @@ def pr_comment(
     repo: str = typer.Argument(...),
     number: int = typer.Argument(..., help="PR number"),
     body: str = typer.Option(..., "--body", "-b", help="Comment body (Markdown allowed)"),
-):
+) -> None:
     """Post a general PR comment (issues API)."""
     from cqia.integrations.github_pr import GitHubPRClient
     client = GitHubPRClient()
@@ -120,7 +127,7 @@ def chat_repo(
     k: int = typer.Option(5, help="Top-K retrieval results"),
     name_boost: float = typer.Option(0.3, help="Boost for function/file name matches"),
     model_name: str = typer.Option("openai/gpt-oss-120b", help="Groq model name"),
-    temperature: float = typer.Option(2.0, help="LLM temperature"),
+    temperature: float = typer.Option(0.0, help="LLM temperature"),
     include: list[str] = typer.Option(["**/*.py", "**/*.js", "**/*.ts"], help="Include globs"),
     exclude: list[str] = typer.Option(
         [".git/**", "**/node_modules/**", "**/__pycache__/**", "**/.venv/**", "**/venv/**"],
@@ -129,28 +136,18 @@ def chat_repo(
     max_bytes: int = typer.Option(5_000_000, help="Per-file size cap (for rationale analysis)"),
     persist_dir: str = typer.Option(".cqia_vectordb", help="Chroma persistence directory"),
 ) -> None:
-    """
-    Q&A over a repository path:
-    - Retrieval from existing vector index (function/docstring chunks).
-    - Answers via ChatGroq with inline file:line citations.
-    - Adds brief detector rationale (complexity/duplication/security) when available.
-    """
+    """Scoped Q&A over a repository path with inline file:line citations."""
     scope = Path(analyze_path)
     if not scope.exists():
         typer.secho(f"Path not found: {scope}", fg=typer.colors.RED, err=True)
         raise typer.Exit(code=2)
 
-    # Build retriever filtered by path prefix to enforce repo scoping
+    # Retrieval
     manager = CodeEmbeddingManager(persist_directory=persist_dir)
-    retriever = FileAwareRetriever(
-        vector_store=manager.vector_store,
-        k=k,
-        name_match_boost=name_boost,
-    )
+    retriever = FileAwareRetriever(vector_store=manager.vector_store, k=k, name_match_boost=name_boost)
+    raw_docs = retriever.invoke(question)
 
-    # Retrieve docs
-    # Retrieve docs (Runnable API)
-    raw_docs = retriever.invoke(question)  # instead of get_relevant_documents
+    # Scope filter
     scoped_docs = []
     scope_str = str(scope.resolve()).replace("\\", "/")
     for d in raw_docs:
@@ -165,29 +162,61 @@ def chat_repo(
         console.print("[yellow]No scoped matches found in the provided path. Consider re-indexing that path or relaxing the query.[/]")
         return
 
-    scoped_docs = sorted(scoped_docs, key=lambda d: len(d.page_content))[:k]
+    # Reduce k further if too many matches
+    scoped_docs = scoped_docs[:3]
 
-    # Optional detector rationale for this scope (already present)
+    # Detector rationale (already lightweight)
     rationale = _detector_rationale_for_path(scope, include, exclude, max_bytes)
 
-    # Load findings context (report.md + JSON)
-    from cqia.qa.artifacts import load_scope_findings
-    findings_context = load_scope_findings(scope, max_chars=80_000)
+    # Findings context: limit size
+    findings_context = load_scope_findings(scope, max_chars=8_000)
 
-    # LLM
+    # Trim retrieved docs to avoid 413
+    max_chars_per_doc = 1500
+    def trim_text(t: str, n: int) -> str:
+        return t[:n] if t and len(t) > n else (t or "")
+
+    trimmed_docs = []
+    for d in scoped_docs:
+        d_copy = d.copy()
+        d_copy.page_content = trim_text(d.page_content, max_chars_per_doc)
+        trimmed_docs.append(d_copy)
+
+    # Build compact context preview
+    def render_snippet(doc):
+        md = doc.metadata or {}
+        loc = f"{md.get('file_path','')}:{int(md.get('start_line',1))}-{int(md.get('end_line',1))}"
+        name = md.get("name", md.get("chunk_type", ""))
+        header = f"# {loc} :: {name}\n"
+        return header + (doc.page_content or "")
+
+    context_pieces = [render_snippet(d) for d in trimmed_docs]
+    context_text = "\n\n---\n\n".join(context_pieces)
+
+    # Approximate prompt size guard: further shrink if needed
+    approx_input_chars = len(context_text) + len(findings_context) + len(question) + len(rationale)
+    if approx_input_chars > 12000:
+        # tighten per-doc budget
+        tighter_docs = []
+        for d in trimmed_docs:
+            d2 = d.copy()
+            d2.page_content = trim_text(d.page_content, 800)
+            tighter_docs.append(d2)
+        trimmed_docs = tighter_docs
+        context_pieces = [render_snippet(d) for d in trimmed_docs]
+        context_text = "\n\n---\n\n".join(context_pieces)
+
+    # LLM call with trimmed context
     llm = build_chatgroq_llm(model_name=model_name, temperature=temperature)
-
-    # Generate cited answer with findings context
     answer = answer_with_citations(
         llm,
         question,
-        scoped_docs,
+        trimmed_docs,           # pass trimmed docs
         detector_rationale=rationale,
         findings_context=findings_context,
     )
 
 
-    # Print a compact result table with citations
     table = Table(title="Retrieved Matches (Scoped)")
     table.add_column("File", overflow="fold")
     table.add_column("Name", overflow="fold")
@@ -215,7 +244,7 @@ def graph_analyze(
         [".git/**", "**/node_modules/**", "**/__pycache__/**", "**/.venv/**", "**/venv/**"], help="Exclude globs"
     ),
     max_bytes: int = typer.Option(2_000_000, help="Per-file size cap"),
-):
+) -> None:
     graph = build_cqia_graph()
     state = {
         "mode": "analyze",
@@ -230,12 +259,13 @@ def graph_analyze(
     console.print(f"[green]Report:[/] {result.get('analysis_report_path')}")
     console.print(f"[green]JSON:[/] {result.get('analysis_json_path')}")
 
+
 @app.command("graph-chat")
 def graph_chat(
     question: str = typer.Argument(..., help="Question about the codebase"),
     k: int = typer.Option(5, help="Top-K results"),
     name_boost: float = typer.Option(0.3, help="Boost for name/path match"),
-):
+) -> None:
     graph = build_cqia_graph()
     state = {
         "mode": "chat",
@@ -322,10 +352,13 @@ def analyze(
             dup_k=rules.get("duplication", {}).get("k_shingle", 7),
             dup_threshold=rules.get("duplication", {}).get("similarity_threshold", 0.90),
         )
+
+        # Pass-through without reshaping: expected keys are title/file/start_line/end_line/why/fix/score/severity/category
         append_top_issues(out_path, results.get("findings_scored", []))
         append_per_category_summary(out_path, results.get("findings_scored", []))
         append_issue_details(out_path, results.get("findings_scored", []))
         append_findings(out_path, results.get("findings_raw", {}))
+
         typer.secho(f"Appended findings, category summaries, and details: {out_path}", fg=typer.colors.GREEN)
     except Exception as e:
         typer.secho(f"Detector pipeline failed: {e}", fg=typer.colors.RED)
@@ -335,9 +368,11 @@ def analyze(
     try:
         dep_graph = results.get("dep_graph") or results.get("dependencies", {}).get("graph")
         dep_metrics = _safe_dep_metrics(results)
+
         dep_out = export_dependency_graph(dep_graph, cfg.resolve_output_dir()) if dep_graph is not None else None
         append_dependencies(out_path, dep_metrics)
         append_dependency_outline(out_path, dep_metrics, results.get("hotspots", []))
+
         json_out = export_json_report(
             cfg.resolve_output_dir(),
             files_scanned=len(files),
@@ -352,6 +387,7 @@ def analyze(
     except Exception as e:
         typer.secho(f"Dependency/report export failed: {e}", fg=typer.colors.RED)
         raise typer.Exit(code=1)
+
 
 @app.command("index")
 def index_repository(
@@ -379,7 +415,6 @@ def index_repository(
 
     chunker = ASTFunctionChunker()
     manager = CodeEmbeddingManager(persist_directory=persist_dir, embedding_model=embedding_model)
-
     if reset:
         ok = manager.vector_store.reset_collection()
         if ok:
@@ -397,8 +432,8 @@ def index_repository(
     console.print(f"[green]Total chunks stored: {res['total_chunks']}[/]")
     if res["failed_files"]:
         console.print(f"[yellow]Failed files: {res['failed_files']}[/]")
-
     console.print(f"[blue]Collection stats: {stats}[/]")
+
 
 @app.command("query")
 def query_index(
@@ -406,11 +441,12 @@ def query_index(
     k: int = typer.Option(5, help="Top-K results"),
     persist_dir: str = typer.Option(".cqia_vectordb", help="Chroma persistence directory"),
     name_boost: float = typer.Option(0.3, help="Boost factor for path/function name matches"),
-):
+) -> None:
     """Query the indexed codebase with a smart retriever that boosts path/name matches."""
     manager = CodeEmbeddingManager(persist_directory=persist_dir)
     retriever = FileAwareRetriever(vector_store=manager.vector_store, k=k, name_match_boost=name_boost)
-    docs = retriever.get_relevant_documents(query)
+    docs = retriever.invoke(query)
+
     table = Table(title="RAG Results")
     table.add_column("File", overflow="fold")
     table.add_column("Name", overflow="fold")
@@ -426,6 +462,7 @@ def query_index(
         )
     console.print(table)
 
+
 @app.command("tune")
 def tune(
     py_repo: str = typer.Option("https://github.com/pallets/flask", help="Python repo (path or Git URL)"),
@@ -436,7 +473,8 @@ def tune(
     skip_py: bool = typer.Option(False, help="Skip tuning on Python repo"),
     skip_js: bool = typer.Option(False, help="Skip tuning on JS repo"),
 ) -> None:
-    work = Path(tmp_dir); work.mkdir(parents=True, exist_ok=True)
+    work = Path(tmp_dir)
+    work.mkdir(parents=True, exist_ok=True)
     rules = load_rules(Path(rules_file))
 
     py_res: dict = {}
@@ -493,7 +531,9 @@ def tune(
     else:
         console.print("No complexity data found; keeping defaults")
 
-    dup_total = len((py_res.get("findings_raw", {}) or {}).get("duplication", [])) + len((js_res.get("findings_raw", {}) or {}).get("duplication", []))
+    dup_total = len((py_res.get("findings_raw", {}) or {}).get("duplication", [])) + len(
+        (js_res.get("findings_raw", {}) or {}).get("duplication", [])
+    )
     thr = float(rules.get("duplication", {}).get("similarity_threshold", 0.90))
     if dup_total > 50:
         thr = min(0.97, thr + 0.02)
@@ -517,7 +557,8 @@ def tune(
     console.print(f"[green]Wrote tuned rules to {outp}[/]")
 
     tbl = Table(title="Tuned thresholds and weights")
-    tbl.add_column("Key"); tbl.add_column("Value")
+    tbl.add_column("Key")
+    tbl.add_column("Value")
     for k in ["warn_at", "p1_cutoff", "p0_cutoff"]:
         if "complexity" in rules and k in rules["complexity"]:
             tbl.add_row(f"complexity.{k}", str(rules["complexity"][k]))
@@ -527,6 +568,7 @@ def tune(
         tbl.add_row(f"weights.{cat}", str(w))
     console.print(tbl)
     console.print("[blue]Tuning complete. Future analyze runs will use these settings.[/]")
+
 
 if __name__ == "__main__":
     app()

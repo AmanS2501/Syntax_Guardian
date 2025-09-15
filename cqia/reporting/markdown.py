@@ -1,262 +1,6 @@
-# from __future__ import annotations
-# from pathlib import Path
-# from typing import Iterable, Sequence, Mapping, Any, List
-
-# # Optional typed imports (for hints only)
-# from cqia.analysis.detectors.testing_docs import DocFinding, TestGapFinding
-# from cqia.analysis.detectors.complexity import ComplexityFinding
-# from cqia.analysis.detectors.duplication import DupFinding
-# from cqia.analysis.detectors.performance import PerfFinding
-# from cqia.analysis.detectors.security import SecFinding
-
-# def _f(x, default: float = 0.0) -> float:
-#     try:
-#         return float(x)
-#     except Exception:
-#         try:
-#             if isinstance(x, (list, tuple)) and len(x) > 1:
-#                 return float(x[1])
-#             return float(default)
-#         except Exception:
-#             return float(default)
-
-
-# def _as_int(x) -> int:
-#     if isinstance(x, (list, tuple)):
-#         if len(x) > 1:
-#             return int(_f(x[1], 0))
-#         if len(x) == 1:
-#             return int(_f(x, 0))
-#         return 0
-#     return int(_f(x, 0.0))
-
-# def _i(x: Any, default: int = 0) -> int:
-#     try:
-#         return int(_f(x, default))
-#     except Exception:
-#         return int(default)
-
-# def _get(obj: Any, key: str, default: Any = None) -> Any:
-#     try:
-#         return getattr(obj, key)
-#     except Exception:
-#         if isinstance(obj, Mapping):
-#             return obj.get(key, default)
-#         return default
-
-# def _int(obj: Any, key: str, default: int = 1) -> int:
-#     return _i(_get(obj, key, default), default)
-
-# def _str(obj: Any, key: str, default: str = "") -> str:
-#     try:
-#         return str(_get(obj, key, default))
-#     except Exception:
-#         return str(default)
-
-# def write_basic_report(files: Sequence, out_dir: Path) -> Path:
-#     out_dir.mkdir(parents=True, exist_ok=True)
-#     out_path = out_dir / "report.md"
-#     lines: List[str] = []
-#     lines.append("# Code Quality Report\n\n")
-#     lines.append("- [Summary](#summary)\n- [Top issues](#top-issues)\n- [Per-category](#per-category)\n- [Issue details](#issue-details)\n- [Dependencies](#dependencies)\n\n")
-
-#     # Summary
-#     lang_counts: dict[str, int] = {}
-#     for f in files:
-#         lang = _str(f, "language", "unknown")
-#         lang_counts[lang] = lang_counts.get(lang, 0) + 1
-#     lines.append("## Summary\n")
-#     lines.append(f"- Files scanned: {len(files)}\n")
-#     py = lang_counts.get("python", 0); js = lang_counts.get("javascript", 0); ts = lang_counts.get("typescript", 0)
-#     lines.append(f"- Python: {py}  |  JavaScript: {js}  |  TypeScript: {ts}\n\n")
-
-#     lines.append("### File listing\n")
-#     for f in files:
-#         path = _str(f, "path")
-#         lang = _str(f, "language", "unknown")
-#         ln = _int(f, "lines", 0)
-#         lines.append(f"- {path} ({lang}, {ln} lines)\n")
-
-#     out_path.write_text("".join(lines), encoding="utf-8")
-#     return out_path
-
-# def append_top_issues(out_path: Path, findings_scored: Sequence[Any]) -> None:
-#     lines: List[str] = []
-#     lines.append("\n## Top issues\n")
-#     if not findings_scored:
-#         lines.append("- No issues found.\n")
-#         with out_path.open("a", encoding="utf-8") as fh:
-#             fh.write("".join(lines))
-#         return
-
-#     items = sorted(findings_scored, key=lambda s: float(_get(s, "score", 0.0)), reverse=True)[:10]
-#     for s in items:
-#         cat = _str(s, "category", "issue")
-#         sev = _str(s, "severity", "P3")
-#         title = _str(s, "title", _str(s, "why", "Issue"))
-#         file_ = _str(s, "file", "")
-#         a = _int(s, "start_line", 1); b = _int(s, "end_line", a)
-#         sc = _f(_get(s, "score", 0.0), 0.0)
-#         lines.append(f"- [{sev}] {cat}: {title} — {file_}:{a}-{b} (score {sc:.2f})\n")
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-# def append_per_category_summary(out_path: Path, findings_scored: Sequence[Any]) -> None:
-#     lines: List[str] = []
-#     lines.append("\n## Per-category\n")
-#     if not findings_scored:
-#         lines.append("- No issues found.\n")
-#         with out_path.open("a", encoding="utf-8") as fh:
-#             fh.write("".join(lines))
-#         return
-#     counts: dict[str, int] = {}
-#     for s in findings_scored:
-#         cat = _str(s, "category", "other")
-#         counts[cat] = counts.get(cat, 0) + 1
-#     for cat, n in sorted(counts.items(), key=lambda x: x):
-#         lines.append(f"- {cat}: {n}\n")
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-# def append_issue_details(out_path: Path, findings_scored: Sequence[Any]) -> None:
-#     lines: List[str] = []
-#     lines.append("\n## Issue details\n")
-#     if not findings_scored:
-#         lines.append("- No issues found.\n")
-#         with out_path.open("a", encoding="utf-8") as fh:
-#             fh.write("".join(lines))
-#         return
-#     grouped: dict[str, list[Any]] = {}
-#     for s in findings_scored:
-#         grouped.setdefault(_str(s, "category", "other"), []).append(s)
-#     for cat, items in grouped.items():
-#         lines.append(f"\n### {cat.capitalize()}\n")
-#         for s in sorted(items, key=lambda x: float(_get(x, "score", 0.0)), reverse=True)[:50]:
-#             sev = _str(s, "severity", "P3")
-#             title = _str(s, "title", _str(s, "why", "Issue"))
-#             why = _str(s, "why", "")
-#             fix = _str(s, "fix", "")
-#             file_ = _str(s, "file", "")
-#             a = _int(s, "start_line", 1); b = _int(s, "end_line", a)
-#             sc = _f(_get(s, "score", 0.0), 0.0)
-#             lines.append(f"- [{sev} • {sc:.2f}] {title}\n  - Where: {file_}:{a}-{b}\n  - Why: {why}\n  - Fix: {fix}\n")
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-# def append_findings(out_path: Path, findings: dict) -> None:
-#     lines = []
-#     lines.append("\n## Findings\n")
-
-#     sec = findings.get("security", [])
-#     lines.append(f"\n### Security ({len(sec)})\n")
-#     for f in sec:
-#         lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
-
-#     comp = findings.get("complexity", [])
-#     lines.append(f"\n### Complexity ({len(comp)})\n")
-#     for f in comp:
-#         lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
-
-#     dup = findings.get("duplication", [])
-#     lines.append(f"\n### Duplication ({len(dup)})\n")
-#     for f in dup:
-#         fp = getattr(f, "files", ())
-#         f1 = ""; f2 = ""
-#         if isinstance(fp, (tuple, list)):
-#             if len(fp) >= 1:
-#                 f1 = str(fp)
-#             if len(fp) >= 2:
-#                 f2 = str(fp[1])
-#         pair = f"{f1} vs {f2}" if f2 else (f1 or "<unknown>")
-#         msg = str(getattr(f, "message", "duplicate"))
-#         lines.append(f"- {pair} — {msg}\n")
-
-#     perf = findings.get("performance", [])
-#     lines.append(f"\n### Performance ({len(perf)})\n")
-#     for f in perf:
-#         lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')} — Hint: {getattr(f,'hint','')}\n")
-
-#     docs = findings.get("documentation", [])
-#     lines.append(f"\n### Documentation ({len(docs)})\n")
-#     for f in docs:
-#         lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
-
-#     tests = findings.get("testing", [])
-#     lines.append(f"\n### Testing ({len(tests)})\n")
-#     for f in tests:
-#         exp = getattr(f, 'expected_test', 'tests/test_<name>.py')
-#         hint = getattr(f, 'hint', 'Create a test file')
-#         lines.append(f"- {str(getattr(f,'file',''))} — Missing mapped test ⇒ {exp} — Hint: {hint}\n")
-
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-
-# def append_dependencies(out_path: Path, metrics: dict) -> None:
-#     fan_in = metrics.get("fan_in", {}) or {}
-#     top_fan_in = metrics.get("top_fan_in", []) or []
-#     top_fan_out = metrics.get("top_fan_out", []) or []
-#     cycles = metrics.get("cycles", []) or []
-
-#     lines = []
-#     lines.append("\n## Dependencies\n")
-#     lines.append(f"- Nodes: {len(fan_in)}\n")
-#     lines.append("- Top fan-in:\n")
-#     for n, v in list(top_fan_in)[:5]:
-#         lines.append(f"  - {str(n)}: {_as_int(v)}\n")
-#     lines.append("- Top fan-out:\n")
-#     for n, v in list(top_fan_out)[:5]:
-#         lines.append(f"  - {str(n)}: {_as_int(v)}\n")
-#     if cycles:
-#         lines.append(f"- Cycles detected: {len(cycles)}\n")
-#         for c in list(cycles)[:5]:
-#             lines.append(f"  - {' -> '.join([str(x) for x in c])}\n")
-#     else:
-#         lines.append("- Cycles detected: 0\n")
-
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-# def append_dependency_outline(out_path: Path, metrics: dict, hotspots: list[tuple[str, float, int, float]]) -> None:
-#     fan_in = metrics.get("fan_in", {}) or {}
-#     fan_out = metrics.get("fan_out", {}) or {}
-#     cycles = metrics.get("cycles", []) or []
-#     top_fan_in = metrics.get("top_fan_in", []) or []
-#     top_fan_out = metrics.get("top_fan_out", []) or []
-
-#     lines = []
-#     lines.append("\n## Dependency outline\n")
-#     lines.append("- Graph summary:\n")
-#     lines.append(f"  - Nodes: {len(fan_in)}\n")
-#     # Sum of in-degree values; handle tuple/list values defensively
-#     try:
-#         edge_count = sum(_as_int(v) for v in fan_in.values())
-#     except Exception:
-#         edge_count = 0
-#     lines.append(f"  - Edges: {edge_count}\n")
-#     lines.append("- Top fan-in modules:\n")
-#     for n, v in list(top_fan_in)[:5]:
-#         lines.append(f"  - {n}: {_as_int(v)}\n")
-#     lines.append("- Top fan-out modules:\n")
-#     for n, v in list(top_fan_out)[:5]:
-#         lines.append(f"  - {n}: {_as_int(v)}\n")
-#     if cycles:
-#         lines.append(f"- Cycles: {len(cycles)}\n")
-#         for c in list(cycles)[:5]:
-#             lines.append(f"  - {' -> '.join([str(x) for x in c])}\n")
-#     else:
-#         lines.append("- Cycles: 0\n")
-#     if hotspots:
-#         lines.append("- Hotspots (fan-in × complexity):\n")
-#         for path_str, score, fi, comp_sum in hotspots[:8]:
-#             lines.append(f"  - {path_str} — score {float(score):.2f} (fan-in {int(fi)}, complexity {int(comp_sum)})\n")
-#     with out_path.open("a", encoding="utf-8") as fh:
-#         fh.write("".join(lines))
-
-
 from __future__ import annotations
 from pathlib import Path
-from typing import Iterable, Dict, List, Any, Mapping, Sequence
+from typing import Iterable, Dict, List, Any, Mapping
 
 from cqia.ingestion.walker import FileMeta
 from cqia.analysis.severity import ScoredFinding
@@ -267,16 +11,13 @@ from cqia.analysis.detectors.performance import PerfFinding
 from cqia.analysis.detectors.testing_docs import DocFinding, TestGapFinding
 
 
-# ----------------------
-# Safe casting utilities
-# ----------------------
+# ---------- Safe casting helpers ----------
 
 def _f(x: Any, default: float = 0.0) -> float:
     try:
         return float(x)
     except Exception:
         try:
-            # Handle pair-like shapes: (name, value) or [name, value]
             if isinstance(x, (list, tuple)):
                 if len(x) > 1:
                     return float(x[1])
@@ -312,19 +53,8 @@ def _get(obj: Any, key: str, default: Any = None) -> Any:
             return obj.get(key, default)
         return default
 
-def _int(obj: Any, key: str, default: int = 1) -> int:
-    return _i(_get(obj, key, default), default)
 
-def _str(obj: Any, key: str, default: str = "") -> str:
-    try:
-        return str(_get(obj, key, default))
-    except Exception:
-        return str(default)
-
-
-# ----------------------
-# TOC and basic sections
-# ----------------------
+# ---------- TOC and basic report ----------
 
 def _toc() -> str:
     return (
@@ -339,9 +69,8 @@ def write_basic_report(files: Iterable[FileMeta], out_dir: Path) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "report.md"
 
-    # Count by language
-    lang_counts: Dict[str, int] = {}
     files_list = list(files)
+    lang_counts: Dict[str, int] = {}
     for f in files_list:
         lang = getattr(f, "language", "unknown")
         lang_counts[lang] = lang_counts.get(lang, 0) + 1
@@ -368,9 +97,7 @@ def write_basic_report(files: Iterable[FileMeta], out_dir: Path) -> Path:
     return out_path
 
 
-# ----------------------
-# Findings summaries
-# ----------------------
+# ---------- Top issues and summaries ----------
 
 def append_top_issues(out_path: Path, scored: List[ScoredFinding], max_rows: int = 10) -> None:
     lines: List[str] = []
@@ -453,9 +180,7 @@ def append_issue_details(out_path: Path, scored: List[ScoredFinding]) -> None:
         fh.write("".join(lines))
 
 
-# ----------------------
-# Raw findings section
-# ----------------------
+# ---------- Raw findings ----------
 
 def append_findings(out_path: Path, findings: dict) -> None:
     lines: List[str] = []
@@ -465,13 +190,17 @@ def append_findings(out_path: Path, findings: dict) -> None:
     sec: List[SecFinding] = findings.get("security", []) or []
     lines.append(f"\n### Security ({len(sec)})\n")
     for f in sec:
-        lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
+        a = _as_int(getattr(f, "start_line", 1), 1)
+        b = _as_int(getattr(f, "end_line", a), a)
+        lines.append(f"- {str(getattr(f,'file',''))}:{a}-{b} — {getattr(f,'message','')}\n")
 
     # Complexity
     comp: List[ComplexityFinding] = findings.get("complexity", []) or []
     lines.append(f"\n### Complexity ({len(comp)})\n")
     for f in comp:
-        lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
+        a = _as_int(getattr(f, "start_line", 1), 1)
+        b = _as_int(getattr(f, "end_line", a), a)
+        lines.append(f"- {str(getattr(f,'file',''))}:{a}-{b} — {getattr(f,'message','')}\n")
 
     # Duplication
     dup: List[DupFinding] = findings.get("duplication", []) or []
@@ -492,29 +221,32 @@ def append_findings(out_path: Path, findings: dict) -> None:
     perf: List[PerfFinding] = findings.get("performance", []) or []
     lines.append(f"\n### Performance ({len(perf)})\n")
     for f in perf:
-        lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')} — Hint: {getattr(f,'hint','')}\n")
+        a = _as_int(getattr(f, "start_line", 1), 1)
+        b = _as_int(getattr(f, "end_line", a), a)
+        lines.append(f"- {str(getattr(f,'file',''))}:{a}-{b} — {getattr(f,'message','')} — Hint: {getattr(f,'hint','')}\n")
 
     # Documentation
     docs: List[DocFinding] = findings.get("documentation", []) or []
     lines.append(f"\n### Documentation ({len(docs)})\n")
     for f in docs:
-        lines.append(f"- {str(getattr(f,'file',''))}:{int(getattr(f,'start_line',1))}-{int(getattr(f,'end_line',1))} — {getattr(f,'message','')}\n")
+        a = _as_int(getattr(f, "start_line", 1), 1)
+        b = _as_int(getattr(f, "end_line", a), a)
+        lines.append(f"- {str(getattr(f,'file',''))}:{a}-{b} — {getattr(f,'message','')}\n")
 
     # Testing
     tests: List[TestGapFinding] = findings.get("testing", []) or []
     lines.append(f"\n### Testing ({len(tests)})\n")
     for f in tests:
-        exp = getattr(f, 'expected_test', 'tests/test_<name>.py')
-        hint = getattr(f, 'hint', 'Create a test file')
+        exp = getattr(f, "expected_test", "tests/test_<name>.py")
+        hint = getattr(f, "hint", "Create a test file")
         lines.append(f"- {str(getattr(f,'file',''))} — Missing mapped test ⇒ {exp} — Hint: {hint}\n")
 
     with out_path.open("a", encoding="utf-8") as fh:
         fh.write("".join(lines))
 
 
-# ----------------------
-# Dependencies sections
-# ----------------------
+
+# ---------- Dependencies ----------
 
 def append_dependencies(out_path: Path, metrics: dict) -> None:
     fan_in = metrics.get("fan_in", {}) or {}
@@ -526,10 +258,18 @@ def append_dependencies(out_path: Path, metrics: dict) -> None:
     lines.append("\n## Dependencies\n")
     lines.append(f"- Nodes: {len(fan_in)}\n")
     lines.append("- Top fan-in:\n")
-    for n, v in list(top_fan_in)[:5]:
+    for item in list(top_fan_in)[:5]:
+        if isinstance(item, (tuple, list)) and len(item) >= 2:
+            n, v = item[0], item[1]
+        else:
+            n, v = str(item), 0
         lines.append(f"  - {str(n)}: {_as_int(v)}\n")
     lines.append("- Top fan-out:\n")
-    for n, v in list(top_fan_out)[:5]:
+    for item in list(top_fan_out)[:5]:
+        if isinstance(item, (tuple, list)) and len(item) >= 2:
+            n, v = item[0], item[1]
+        else:
+            n, v = str(item), 0
         lines.append(f"  - {str(n)}: {_as_int(v)}\n")
     if cycles:
         lines.append(f"- Cycles detected: {len(cycles)}\n")
@@ -543,41 +283,42 @@ def append_dependencies(out_path: Path, metrics: dict) -> None:
 
 def append_dependency_outline(out_path: Path, metrics: dict, hotspots: List[tuple[str, float, int, float]]) -> None:
     fan_in = metrics.get("fan_in", {}) or {}
-    fan_out = metrics.get("fan_out", {}) or {}
-    cycles = metrics.get("cycles", []) or []
     top_fan_in = metrics.get("top_fan_in", []) or []
     top_fan_out = metrics.get("top_fan_out", []) or []
+    cycles = metrics.get("cycles", []) or []
 
     lines: List[str] = []
     lines.append("\n## Dependency outline\n")
     lines.append("- Graph summary:\n")
     lines.append(f"  - Nodes: {len(fan_in)}\n")
-    # Sum in-degrees defensively (values may be ints or pair-like)
     try:
         edge_count = sum(_as_int(v) for v in fan_in.values())
     except Exception:
         edge_count = 0
     lines.append(f"  - Edges: {edge_count}\n")
-
     lines.append("- Top fan-in modules:\n")
-    for n, v in list(top_fan_in)[:5]:
+    for item in list(top_fan_in)[:5]:
+        if isinstance(item, (tuple, list)) and len(item) >= 2:
+            n, v = item[0], item[1]
+        else:
+            n, v = str(item), 0
         lines.append(f"  - {n}: {_as_int(v)}\n")
-
     lines.append("- Top fan-out modules:\n")
-    for n, v in list(top_fan_out)[:5]:
+    for item in list(top_fan_out)[:5]:
+        if isinstance(item, (tuple, list)) and len(item) >= 2:
+            n, v = item[0], item[1]
+        else:
+            n, v = str(item), 0
         lines.append(f"  - {n}: {_as_int(v)}\n")
-
     if cycles:
         lines.append(f"- Cycles: {len(cycles)}\n")
         for c in list(cycles)[:5]:
             lines.append(f"  - {' -> '.join([str(x) for x in c])}\n")
     else:
         lines.append("- Cycles: 0\n")
-
     if hotspots:
         lines.append("- Hotspots (fan-in × complexity):\n")
         for path_str, score, fi, comp_sum in hotspots[:8]:
             lines.append(f"  - {path_str} — score {float(_f(score, 0.0)):.2f} (fan-in {_as_int(fi)}, complexity {_as_int(comp_sum)})\n")
-
     with out_path.open("a", encoding="utf-8") as fh:
         fh.write("".join(lines))

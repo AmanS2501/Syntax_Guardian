@@ -53,8 +53,7 @@ def combine_with_context(base: float, category: str, context: float | None = Non
         return _clamp01(base)
     cap = CONTEXT_CAP.get(category, 0.2)
     c = _clamp01(context)
-    combined = base + cap * c - base * cap * c
-    return _clamp01(combined)
+    return _clamp01(base + cap * c - base * cap * c)
 
 def score_security(weight: float) -> float:
     return _clamp01(weight)
@@ -105,7 +104,7 @@ def fix_text(category: str, extra: dict | None) -> str:
     if category == "performance":
         kind = (extra or {}).get("kind", "")
         if kind == "string_concat_in_loop":
-            return "- Append to a list in the loop and join once: parts.append(x); s = ''.join(parts).\n"
+            return "- Append to a list in the loop and join once: parts.append(x); s=''.join(parts).\n"
         if kind in {"io_in_loop", "requests_in_loop"}:
             return "- Hoist I/O out of the loop, batch requests, or use concurrency/async with pooling and timeouts.\n"
         return "- Reduce per-iteration work; batch or cache repeated operations.\n"
@@ -120,8 +119,10 @@ def override_weights(new_weights: dict | None):
     global DEFAULT_WEIGHTS
     if not new_weights:
         return
-    updated = dict(DEFAULT_WEIGHTS)
+    # copy to a mutable dict and update
+    w = dict(DEFAULT_WEIGHTS)
     for k, v in new_weights.items():
         if isinstance(v, (int, float)):
-            updated[k] = float(v)
-    DEFAULT_WEIGHTS = updated
+            w[k] = float(v)
+    # rebind DEFAULT_WEIGHTS to updated mapping
+    DEFAULT_WEIGHTS = w  # type: ignore[assignment]

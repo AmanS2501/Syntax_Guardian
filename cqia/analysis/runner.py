@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 import json
@@ -8,6 +7,21 @@ from pathlib import Path
 import networkx as nx
 
 from cqia.ingestion.walker import FileMeta, walk_repo
+
+# ====== NEW HELPER FUNCTION ======
+def _safe_as_int(x: t.Any, default: int = 0) -> int:
+    """Safely convert any value to int, handling tuples and other complex types."""
+    try:
+        if isinstance(x, (list, tuple)):
+            if len(x) > 1:
+                return int(float(x[1]))
+            if len(x) == 1:
+                return int(float(x[0]))
+            return int(default)
+        return int(float(x))
+    except Exception:
+        return int(default)
+
 from cqia.parsing.ir import ModuleIR, FunctionIR
 from cqia.parsing.python_parser import parse_python
 from cqia.parsing.ts_parser import parse_js_ts
@@ -26,18 +40,15 @@ from cqia.analysis.severity import (
 Number = t.Union[int, float]
 
 def _fnum(x: t.Any, default: float = 0.0) -> float:
-    try: return float(x)
-    except Exception: return float(default)
-
-def _inum(x: t.Any, default: int = 0) -> int:
-    try: return int(x)
+    try:
+        return float(x)
     except Exception:
-        try: return int(float(x))
-        except Exception: return int(default)
+        return float(default)
 
 def _norm(val: Number, max_val: Number) -> float:
     mv = _fnum(max_val, 1.0)
-    if mv == 0.0: return 0.0
+    if mv == 0.0:
+        return 0.0
     return _fnum(val, 0.0) / mv
 
 def _detect_language(path: Path) -> str:
@@ -51,8 +62,10 @@ def _parse_modules(root: Path, files: list[Path]) -> list[ModuleIR]:
     modules: list[ModuleIR] = []
     for rel in files:
         fpath = root / rel
-        try: text = fpath.read_text(encoding="utf-8", errors="ignore")
-        except Exception: text = ""
+        try:
+            text = fpath.read_text(encoding="utf-8", errors="ignore")
+        except Exception:
+            text = ""
         lang = _detect_language(fpath)
         if lang == "python":
             modules.append(parse_python(rel, text))
@@ -127,21 +140,29 @@ def analyze_repository(
     warn_at = cx.get("warn_at", 10)
 
     # Core findings
-    try: comp_findings = detect_complexity(all_functions, warn_at=warn_at)
-    except Exception: comp_findings = []
+    try:
+        comp_findings = detect_complexity(all_functions, warn_at=warn_at)
+    except Exception:
+        comp_findings = []
 
     dup_cfg = (rules or {}).get("duplication", {}) if isinstance(rules, dict) else {}
     k_shingle = dup_cfg.get("k_shingle", 7)
     similarity_threshold = dup_cfg.get("similarity_threshold", 0.90)
-    try: dup_findings = detect_duplication(all_functions, k=k_shingle, threshold=similarity_threshold)
-    except Exception: dup_findings = []
+    try:
+        dup_findings = detect_duplication(all_functions, k=k_shingle, threshold=similarity_threshold)
+    except Exception:
+        dup_findings = []
 
-    try: docs, gaps = run_testing_and_docs(root, modules)
-    except Exception: docs, gaps = [], []
+    try:
+        docs, gaps = run_testing_and_docs(root, modules)
+    except Exception:
+        docs, gaps = [], []
 
     # Performance on Python functions
-    try: perf_findings = detect_performance(all_functions, root)
-    except Exception: perf_findings = []
+    try:
+        perf_findings = detect_performance(all_functions, root)
+    except Exception:
+        perf_findings = []
 
     # Dependencies
     dep_edges: list[DepEdge] = []
@@ -160,6 +181,25 @@ def analyze_repository(
 
     return (modules, all_functions, comp_findings, docs, sec_findings, gaps, dup_findings, perf_findings, dep_edges, dep_metrics, G)
 
+# ---- Scoring helpers for robust titles/spans ----
+def _safe_span(span: t.Any, default: int = 1) -> tuple[int, int]:
+    try:
+        if isinstance(span, (list, tuple)):
+            if len(span) > 1:
+                return _safe_as_int(span[0], default), _safe_as_int(span[1], default)
+            if len(span) == 1:
+                v = _safe_as_int(span[0], default)
+                return v, v
+            return default, default
+        v = _safe_as_int(span, default)
+        return v, v
+    except Exception:
+        return default, default
+
+def _nonempty_title(default_title: str, f_msg: str | None) -> str:
+    msg = (f_msg or "").strip()
+    return msg if msg else default_title
+
 def _score_all_findings(
     comp: list[ComplexityFinding],
     docs: list[DocFinding],
@@ -174,42 +214,84 @@ def _score_all_findings(
 
     def _push(cat: str, fid: str, file: str, s: int, e: int, score_val: float, title: str, why: str, fix: str, extra: dict | None = None):
         sev = pick_severity(cat, score_val)
-        sf = ScoredFinding(id=fid, category=cat, severity=sev, score=float(score_val), title=title, file=file, start_line=int(s), end_line=int(e), why=why, fix=fix, extra=extra or {})
+        s = max(1, int(s))
+        e = max(1, int(e))
+        file = (file or "").strip() or (extra or {}).get("file_fallback", "")
+        sf = ScoredFinding(
+            id=fid, category=cat, severity=sev, score=float(score_val),
+            title=title.strip(), file=file, start_line=s, end_line=e,
+            why=(why or "").strip(), fix=(fix or "").strip(), extra=extra or {}
+        )
         scored.append(sf)
         jsonable.append({
             "id": fid, "category": cat, "severity": sev, "score": float(score_val),
-            "title": title, "file": file, "start_line": int(s), "end_line": int(e),
-            "hint": fix, "extra": extra or {}
+            "title": sf.title, "file": sf.file, "start_line": s, "end_line": e,
+            "hint": sf.fix, "extra": sf.extra
         })
 
     w = DEFAULT_WEIGHTS
 
+    # Security
     for f in sec:
         base = score_security(w["security"])
-        _push("security", f.id, f.file, f.start_line, f.end_line, base, f.message, explain("security"), fix_text("security", None), {})
+        title = _nonempty_title("Potential insecure call", getattr(f, "message", None))
+        why = explain("security")
+        fix = fix_text("security", None)
+        _push("security", f.id, f.file, f.start_line, f.end_line, base, title, why, fix, {})
 
+    # Complexity
     for f in comp:
-        base = score_complexity(float(getattr(f, "value", 0.0)), w["complexity"], float(warn_at or f.threshold))
-        _push("complexity", f.id, f.file, f.start_line, f.end_line, base, f.message, explain("complexity"), fix_text("complexity", None), {"value": float(getattr(f, "value", 0.0)), "threshold": float(getattr(f, "threshold", 0.0))})
+        val = float(getattr(f, "value", 0.0))
+        thr = float(warn_at or getattr(f, "threshold", 10))
+        base = score_complexity(val, w["complexity"], thr)
+        title = _nonempty_title(f"High cyclomatic complexity: {int(val)} (≥ {int(thr)})", getattr(f, "message", None))
+        why = explain("complexity")
+        fix = fix_text("complexity", None)
+        _push("complexity", f.id, f.file, f.start_line, f.end_line, base, title, why, fix, {"value": val, "threshold": thr})
 
+    # Duplication
     for f in dups:
-        base = score_duplication(float(getattr(f, "similarity", 0.0)), w["duplication"])
-        extra = {"other_file": (f.files[1] if isinstance(f.files, (list, tuple)) and len(f.files) > 1 else "")}
-        file_a = f.files if isinstance(f.files, (list, tuple)) and len(f.files) > 0 else ""
-        s_a, e_a = f.lines if isinstance(f.lines, (list, tuple)) and len(f.lines) > 0 else (1, 1)
-        _push("duplication", f.id, file_a, s_a, e_a, base, f.message, explain("duplication"), fix_text("duplication", extra), extra)
+        sim = float(getattr(f, "similarity", 0.0))
+        base = score_duplication(sim, w["duplication"])
+        files = list(getattr(f, "files", []) or [])
+        primary = str(files[0]) if files else (getattr(f, "file", "") or "")
+        other = str(files[1]) if len(files) > 1 else ""
+        s_a, e_a = 1, 1
+        lines = getattr(f, "lines", None)
+        if lines is not None:
+            s_a, e_a = _safe_span(lines, 1)
+        title = _nonempty_title(f"Near-duplicate code (Jaccard {sim:.2f})", getattr(f, "message", None))
+        why = explain("duplication")
+        extra = {"other_file": other, "similarity": sim, "file_fallback": primary}
+        fix = fix_text("duplication", extra)
+        _push("duplication", f.id, primary, s_a, e_a, base, title, why, fix, extra)
 
+    # Performance
     for f in perf:
         base = score_performance_base(w["performance"])
-        _push("performance", f.id, f.file, f.start_line, f.end_line, base, f.message, explain("performance"), fix_text("performance", {"kind": f.kind}), {"kind": f.kind})
+        kind = getattr(f, "kind", "pattern")
+        title = _nonempty_title(f"Possible performance issue: {kind}", getattr(f, "message", None))
+        why = explain("performance")
+        fix = fix_text("performance", {"kind": kind})
+        _push("performance", f.id, f.file, f.start_line, f.end_line, base, title, why, fix, {"kind": kind})
 
+    # Documentation
     for f in docs:
         base = score_documentation_base(w["documentation"])
-        _push("documentation", f.id, f.file, f.start_line, f.end_line, base, f.message, explain("documentation"), fix_text("documentation", None), {"kind": f.kind})
+        kind = getattr(f, "kind", "docs")
+        title = _nonempty_title(f"Missing {kind} documentation", getattr(f, "message", None))
+        why = explain("documentation")
+        fix = fix_text("documentation", None)
+        _push("documentation", f.id, f.file, f.start_line, f.end_line, base, title, why, fix, {"kind": kind})
 
+    # Testing
     for f in gaps:
         base = score_testing_base(w["testing"])
-        _push("testing", f.id, f.file, 1, 1, base, f.message, explain("testing"), fix_text("testing", {"expected_test": f.expected_test}), {"expected_test": f.expected_test})
+        expected = getattr(f, "expected_test", "")
+        title = _nonempty_title("Missing mapped test", getattr(f, "message", None))
+        why = explain("testing")
+        fix = fix_text("testing", {"expected_test": expected})
+        _push("testing", f.id, f.file, 1, 1, base, title, why, fix, {"expected_test": expected})
 
     return scored, jsonable
 
@@ -228,9 +310,12 @@ def run_analysis(
 
     if isinstance(rules, dict):
         cx = rules.get("complexity", {})
-        if warn_at is None: warn_at = cx.get("warn_at")
-        if p1_cutoff is None: p1_cutoff = cx.get("p1_cutoff")
-        if p0_cutoff is None: p0_cutoff = cx.get("p0_cutoff")
+        if warn_at is None:
+            warn_at = cx.get("warn_at")
+        if p1_cutoff is None:
+            p1_cutoff = cx.get("p1_cutoff")
+        if p0_cutoff is None:
+            p0_cutoff = cx.get("p0_cutoff")
 
     modules, all_functions, comp, docs, sec_findings, gaps, dups, perf_findings, dep_edges, dep_metrics, dep_graph = analyze_repository(
         root, include=include, exclude=exclude, max_bytes=max_bytes, rules=rules
@@ -249,12 +334,12 @@ def run_analysis(
     hotspots: list[tuple[str, float, int, float]] = []
     for path_str, comp_sum in comp_map.items():
         key = Path(path_str).stem
-        fi_val = _inum(fan_in.get(key, 0), 0)
+        fi_val = _safe_as_int(fan_in.get(key, 0), 0)
         comp_val = _fnum(comp_sum, 0.0)
         score_val = _norm(fi_val, max_fi or 1) * _norm(comp_val, max_comp or 1)
         hotspots.append((str(path_str), float(score_val), int(fi_val), float(comp_val)))
 
-    hotspots.sort(key=lambda r: (-_fnum(r[1], 0.0), -_inum(r[2], 0), -_fnum(r[3], 0.0), str(r)))
+    hotspots.sort(key=lambda r: (-_fnum(r[1], 0.0), -_safe_as_int(r[2], 0), -_fnum(r[3], 0.0), str(r)))
 
     # Scoring
     scored, findings_json = _score_all_findings(
