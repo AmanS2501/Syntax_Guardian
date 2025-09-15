@@ -1,82 +1,54 @@
-Environment and keys
+# Technical Notes — Syntax Guardian
 
-GROQ_API_KEY for ChatGroq models (e.g., llama-3.3-70b-versatile); set in shell before CLI or in system env for services.
+These are my working notes from building and iterating on the **Code Quality Intelligence Agent (aka “Syntax Guardian”)**.  Think of this more like a dev log than a polished spec.  It’s a mix of what worked, what didn’t, and things I’d tell my future self before diving back into the codebase.
 
-GITHUB_TOKEN for PR comments (optional).
+---
 
-Dependencies
+## 1. Repo setup & tooling
 
-Core: langchain, chromadb, langchain-groq, fastapi, uvicorn, streamlit, requests, git (system).
+* **Env management:** I settled on `uv` + a local venv instead of conda.  It’s just lighter and plays nicely with the CLI.  The `uv` CLI saved me from dependency hell more than once.
+* **Folder layout:** I kept the `cqia/` package relatively flat.  Detectors live under `cqia/analysis/detectors/` while RAG bits are in `cqia/rag/`.  It’s not textbook-perfect, but it’s easy to navigate.
+* **CLI:** Typer is doing all the heavy lifting.  I originally thought about plain argparse but Typer’s autocompletion and help text were worth it.
+* **Tests:** Only partial coverage so far.  There’s a skeleton `tests/` folder with some smoke tests for the detectors.  Need more unit tests for the RAG pipeline.
 
-Notes:
+## 2. What tripped me up
 
-Use retriever.invoke instead of deprecated get_relevant_documents.
+* **AST parsing for JS/TS:** Python’s `ast` is straightforward, but JS/TS is a rabbit hole.  I used a lightweight heuristic parser for now.  It catches obvious issues but isn’t bulletproof.
+* **Duplication detection:** Initially tried a rolling hash approach.  It was accurate but painfully slow on larger repos.  Switched to token-shingling with Jaccard and that’s fast enough.
+* **Security checks:** Balancing between false positives and coverage is tricky.  For example, flagging every `subprocess` call is noisy.  Ended up whitelisting some common safe patterns.
+* **Dependency graph cycles:** NetworkX made this easy, but interpreting the results in a way that’s actually useful to devs (not just a graph dump) took some trial and error.
 
-Streamlit rendering uses st.markdown and st.json; expect large report.md to load directly.
+## 3. Things I’m happy with
 
-CLI commands
+* **Deterministic core analysis:** All the detectors and scoring are pure functions.  No LLM randomness unless you go into the chat/Q\&A mode.
+* **Report artifacts:** The generated `report.md` is simple markdown but reads like a mini audit doc.  The JSON output is handy if we ever want to feed it into a dashboard.
+* **Hotspot scoring:** Combining complexity and fan-in/out gave surprisingly meaningful results.  It immediately highlights the scary parts of a repo.
 
-Index: Builds a Chroma collection from code chunks (function/method/docstring).
+## 4. RAG/Q\&A side
 
-Analyze: Runs detectors and outputs reports; includes severity scoring block after per-category section.
+* Went with function-level chunking + docstrings.  Keeps the vector DB small and retrieval precise.
+* Using Groq for the LLM part.  Works fine but the plan is to keep the core analysis independent of any external API.
+* Learned that giving the retriever some “filename boosting” helps the answers stay grounded in the right file.
 
-Chat: Scopes retrieval by file_path prefix to the analyze_path and generates a cited answer with findings context.
+## 5. Performance & scaling
 
-serve-api: Starts FastAPI; /api/analyze accepts JSON with github_url, branch, include/exclude, max_bytes, clone_mode (“clean”/“unique”) and returns report paths and stats.
+* For medium repos (<5k files) everything runs comfortably under a few minutes on my laptop.
+* The biggest bottleneck is duplication detection on very large files.  Might need to pre-filter huge files or parallelize that later.
+* Embedding large repos for RAG is memory-heavy.  Could chunk in batches or swap to a persistent vector DB if this grows.
 
-serve-ui: Opens Streamlit UI to run locally or call API.
+## 6. Future todos
 
-pr-comment: Posts a simple Markdown comment to a PR.
+* Proper CI pipeline: run detectors + generate `report.json` on every PR.
+* Better JS/TS parser, ideally tree-sitter.
+* Expand the test suite and measure coverage.
+* Maybe a simple dashboard that charts severity trends over time.
 
-Web service details
+## 7. Random lessons learned
 
-Cloning: Shallow clone with --depth 1; “clean” mode force-removes an existing target (Windows-safe rmtree with read-only fix); “unique” creates a timestamped folder.
+* Good error messages save hours.  Added custom exceptions early and it paid off.
+* Documenting detectors (even with a single line) means I actually remember why I wrote them.
+* Don’t over-engineer early.  Some of the best decisions came from starting with the simplest possible version and only optimizing when I felt the pain.
 
-Analysis: Reuses CLI routines; writes to repo_root/reports/report.md and report.json.
+---
 
-Errors: Returns 400 with detail upon clone or analysis failure; Streamlit displays detail.
-
-Severity scoring specifics
-
-P-levels: P0 critical, P1 high, P2 medium, P3 low; repo-level load uses P_WEIGHTS = {P0:10, P1:5, P2:2, P3:0.5}.
-
-Overall score: 100/(1+load) → fewer and less severe findings approach 100.
-
-Per-category scores computed with the same mapping.
-
-Q&A design
-
-Prompt includes:
-
-Retrieved chunks formatted with file:line spans.
-
-Findings context from report.md and report.json to provide extra grounding.
-
-Instruction to cite [path:start-end] for each claim.
-
-ChatGroq model defaults to llama-3.3-70b-versatile, temperature configurable.
-
-Deployment notes
-
-Local: uv run cqia serve-api, uv run cqia serve-ui.
-
-Containers: add Dockerfiles if deploying; ensure git available and network egress to GitHub; mount writeable volume for .cqia-web-work and reports.
-
-Environment configuration: prefer system env for long-running services; for Windows terminals use set VAR=... (cmd) or $env:VAR="..." (PowerShell).
-
-Hardening and extensions
-
-Auth: Private repo clones require configured git credentials or token-based URLs.
-
-Scaling: Offload heavy analysis to a worker queue and stream progress to the UI; back the vector DB with persistent volume.
-
-Advanced: Add AST parsers for precise structure; integrate rankers; add trend tracking by persisting report.json time series.
-
-Testing strategy
-
-Unit: Detectors, chunkers, scoring combinators, prompt formatting.
-
-Integration: Index → Analyze → Report roundtrip on sample repos.
-
-E2E: FastAPI + UI flow using a known public repo.
-
+These notes aren’t exhaustive, but they capture the messy reality of building Syntax Guardian: a mix of quick wins, rabbit holes, and those “aha” moments that you only get when you’re knee‑deep in the code.
