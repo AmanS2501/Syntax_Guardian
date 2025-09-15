@@ -98,7 +98,7 @@ Syntax Guardian is an intelligent code analysis agent that goes beyond simple li
 #### Basic Analysis
 ```bash
 # Index a repository (creates embeddings)
-uv run cqia index <path-to-repository>
+uv run cqia index .
 
 # Analyze code quality
 uv run cqia analyze <path-to-repository>
