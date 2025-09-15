@@ -1,15 +1,47 @@
 from __future__ import annotations
 import json
+import os
 from pathlib import Path
 import requests
 import streamlit as st
 
+# ---------- App setup ----------
 st.set_page_config(page_title="CQIA Web", layout="wide")
-
 st.title("Code Quality Intelligence (CQIA) – Web UI")
 
-# Controls
-mode = st.radio("Run mode", ["Local (no API)", "Call FastAPI"], horizontal=True)
+# ---------- Backend base URL resolution ----------
+# Priority:
+# 1) Hard default to deployed backend
+# 2) st.secrets["api"]["BASE_URL"] or st.secrets["BASE_URL"]
+# 3) env var API_BASE
+# 4) UI text input override (for manual testing)
+DEPLOYED_DEFAULT = "https://shopping-bot-8lb1.onrender.com"
+
+def _from_secrets() -> str | None:
+    try:
+        if "api" in st.secrets and "BASE_URL" in st.secrets["api"]:
+            return st.secrets["api"]["BASE_URL"]
+    except Exception:
+        pass
+    try:
+        if "BASE_URL" in st.secrets:
+            return st.secrets["BASE_URL"]
+    except Exception:
+        pass
+    return None
+
+def _resolve_api_base(user_input: str) -> str:
+    # precedence: deployed default -> st.secrets -> env -> user input
+    return (
+        DEPLOYED_DEFAULT
+        or _from_secrets()
+        or os.getenv("API_BASE")
+        or user_input
+        or "http://127.0.0.1:8000"
+    )
+
+# ---------- Controls ----------
+mode = st.radio("Run mode", ["Call FastAPI", "Local (no API)"], horizontal=True, index=0)
 
 github_url = st.text_input("GitHub URL to analyze", placeholder="https://github.com/org/repo")
 branch = st.text_input("Branch (optional)", value="")
@@ -18,7 +50,11 @@ col_a, col_b = st.columns(2)
 with col_a:
     include = st.text_area("Include globs", value="**/*.py\n**/*.ts\n**/*.js", height=100)
 with col_b:
-    exclude = st.text_area("Exclude globs", value=".git/**\n**/node_modules/**\n**/__pycache__/**\n**/.venv/**\n**/venv/**", height=100)
+    exclude = st.text_area(
+        "Exclude globs",
+        value=".git/**\n**/node_modules/**\n**/__pycache__/**\n**/.venv/**\n**/venv/**",
+        height=100
+    )
 
 col_c, col_d = st.columns(2)
 with col_c:
@@ -26,10 +62,12 @@ with col_c:
 with col_d:
     clone_mode = st.selectbox("Clone mode", ["clean", "unique"], index=0)
 
-api_base = st.text_input("API base (FastAPI mode)", value="http://127.0.0.1:8000")
+# Text input is now only an override; default resolution prefers deployed URL.
+api_base_override = st.text_input("API base override (optional)", value="")
 
 run = st.button("Analyze", type="primary")
 
+# ---------- Helpers ----------
 def _render_report(report_md_path: str):
     p = Path(report_md_path)
     st.subheader("report.md")
@@ -55,11 +93,13 @@ def _render_json(json_path: str):
     except Exception:
         st.code(raw, language="json")
 
+# ---------- Action ----------
 if run and github_url.strip():
     inc = [g.strip() for g in include.splitlines() if g.strip()]
     exc = [g.strip() for g in exclude.splitlines() if g.strip()]
 
     if mode == "Call FastAPI":
+        api_base = _resolve_api_base(api_base_override).rstrip("/")
         payload = {
             "github_url": github_url.strip(),
             "branch": branch.strip() or None,
@@ -68,10 +108,10 @@ if run and github_url.strip():
             "max_bytes": int(max_bytes),
             "clone_mode": clone_mode,
         }
-        with st.spinner("Calling CQIA Web Service..."):
+        with st.spinner(f"Calling CQIA Web Service at {api_base} ..."):
             try:
-                r = requests.post(f"{api_base.rstrip('/')}/api/analyze", json=payload, timeout=600)
-            except Exception as e:
+                r = requests.post(f"{api_base}/api/analyze", json=payload, timeout=600)
+            except requests.exceptions.RequestException as e:
                 st.error(f"Request failed: {e}")
                 st.stop()
 

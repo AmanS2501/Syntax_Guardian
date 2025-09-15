@@ -12,6 +12,8 @@ uvicorn[standard]>=0.30.0 # serve-api command
 
 streamlit>=1.36.0 # web/ui_app.py Streamlit UI
 
+gunicorn
+
 pydantic>=2.6.0 # models in web.service and reporting.schema
 
 pathspec>=0.12.1 # optional .gitignore matching in walker.py

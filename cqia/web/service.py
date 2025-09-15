@@ -19,6 +19,20 @@ from cqia.reporting.markdown import (
 )
 from cqia.reporting.exporters import export_dependency_graph, export_json_report
 from cqia.ingestion.walker import walk_repo
+from fastapi.middleware.cors import CORSMiddleware
+
+ALLOWED_ORIGINS = [
+    "https://syntaxguardian-edysi7c52xdxovi4q976kk.streamlit.app/",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,       # or use allow_origin_regex if subdomains vary
+    allow_credentials=True,
+    allow_methods=["POST", "GET", "OPTIONS"],
+    allow_headers=["*"],
+    max_age=3600,
+)
 
 app = FastAPI(title="CQIA Web Service")
 
