@@ -395,6 +395,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 - **GitHub Repository**: https://github.com/AmanS2501/Syntax_Guardian
+- **Deployed web link**: [Tap here 👆](https://syntaxguardian-edysi7c52xdxovi4q976kk.streamlit.app/)
 - **Documentation**: [docs/](docs/)
 - **Issue Tracker**: [GitHub Issues](https://github.com/AmanS2501/Syntax_Guardian/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/AmanS2501/Syntax_Guardian/discussions)
