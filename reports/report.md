@@ -14,45 +14,603 @@
 - cqia\__init__.py (python, 3 lines)
 - cqia\agent\__init__.py (python, 1 lines)
 - cqia\agent\graph\flow.py (python, 31 lines)
-- cqia\agent\graph\nodes.py (python, 156 lines)
+- cqia\agent\graph\nodes.py (python, 153 lines)
 - cqia\agent\graph\state.py (python, 29 lines)
 - cqia\analysis\dependency_graph.py (python, 56 lines)
 - cqia\analysis\detectors\complexity.py (python, 34 lines)
 - cqia\analysis\detectors\duplication.py (python, 90 lines)
-- cqia\analysis\detectors\performance.py (python, 126 lines)
+- cqia\analysis\detectors\performance.py (python, 125 lines)
 - cqia\analysis\detectors\security.py (python, 116 lines)
 - cqia\analysis\detectors\testing_docs.py (python, 148 lines)
-- cqia\analysis\runner.py (python, 326 lines)
+- cqia\analysis\runner.py (python, 411 lines)
 - cqia\analysis\severity.py (python, 129 lines)
 - cqia\cli\__init__.py (python, 1 lines)
-- cqia\cli\main.py (python, 552 lines)
+- cqia\cli\main.py (python, 575 lines)
 - cqia\core\__init__.py (python, 1 lines)
-- cqia\core\config.py (python, 19 lines)
+- cqia\core\config.py (python, 17 lines)
 - cqia\ingestion\__init__.py (python, 1 lines)
 - cqia\ingestion\walker.py (python, 131 lines)
 - cqia\integrations\github_pr.py (python, 41 lines)
 - cqia\parsing\imports.py (python, 64 lines)
 - cqia\parsing\ir.py (python, 29 lines)
 - cqia\parsing\python_parser.py (python, 45 lines)
-- cqia\parsing\ts_parser.py (python, 61 lines)
+- cqia\parsing\ts_parser.py (python, 60 lines)
 - cqia\presets\__init__.py (python, 32 lines)
 - cqia\qa\__init__.py (python, 1 lines)
 - cqia\qa\artifacts.py (python, 69 lines)
-- cqia\qa\chain.py (python, 53 lines)
-- cqia\qa\prompt.py (python, 50 lines)
+- cqia\qa\chain.py (python, 35 lines)
+- cqia\qa\prompt.py (python, 41 lines)
 - cqia\rag\__init__.py (python, 1 lines)
 - cqia\rag\chunking\__init__.py (python, 1 lines)
 - cqia\rag\chunking\ast_chunker.py (python, 254 lines)
 - cqia\rag\embeddings\__init__.py (python, 1 lines)
 - cqia\rag\embeddings\vector_store.py (python, 150 lines)
 - cqia\rag\retrieval\__init__.py (python, 1 lines)
-- cqia\rag\retrieval\smart_retriever.py (python, 40 lines)
+- cqia\rag\retrieval\smart_retriever.py (python, 76 lines)
 - cqia\reporting\__init__.py (python, 1 lines)
 - cqia\reporting\exporters.py (python, 27 lines)
-- cqia\reporting\markdown.py (python, 1527 lines)
+- cqia\reporting\markdown.py (python, 325 lines)
 - cqia\reporting\schema.py (python, 40 lines)
-- cqia\utils\deps.py (python, 51 lines)
+- cqia\utils\deps.py (python, 60 lines)
 - cqia\web\api.py (python, 1 lines)
 - cqia\web\clone.py (python, 56 lines)
-- cqia\web\service.py (python, 107 lines)
-- cqia\web\ui_app.py (python, 173 lines)
+- cqia\web\service.py (python, 126 lines)
+- cqia\web\ui_app.py (python, 212 lines)
+
+## Top issues
+| Severity | Score | Category | Location | Title |
+|---|---:|---|---|---|
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+| P3 | 0.00 | issue | :1-1 | Issue |
+
+## Per-category
+
+### Other (274)
+- [P3] Issue — :1-1 — score 0.00
+- [P3] Issue — :1-1 — score 0.00
+- [P3] Issue — :1-1 — score 0.00
+- [P3] Issue — :1-1 — score 0.00
+- [P3] Issue — :1-1 — score 0.00
+
+## Issue details
+
+### Other
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+- [P3 • 0.00] Issue
+  - Where: :1-1
+  - Why: 
+  - Fix: 
+
+## Findings
+
+### Security (0)
+
+### Complexity (18)
+- cqia/agent/graph/nodes.py:123-152 — High cyclomatic complexity: 14 (≥ 12)
+- cqia/analysis/detectors/duplication.py:44-89 — High cyclomatic complexity: 18 (≥ 12)
+- cqia/analysis/detectors/security.py:24-69 — High cyclomatic complexity: 18 (≥ 12)
+- cqia/analysis/runner.py:93-182 — High cyclomatic complexity: 24 (≥ 12)
+- cqia/analysis/runner.py:203-296 — High cyclomatic complexity: 19 (≥ 12)
+- cqia/analysis/severity.py:95-116 — High cyclomatic complexity: 13 (≥ 12)
+- cqia/cli/main.py:124-236 — High cyclomatic complexity: 17 (≥ 12)
+- cqia/cli/main.py:283-389 — High cyclomatic complexity: 13 (≥ 12)
+- cqia/cli/main.py:467-570 — High cyclomatic complexity: 33 (≥ 12)
+- cqia/ingestion/walker.py:66-130 — High cyclomatic complexity: 23 (≥ 12)
+- cqia/parsing/imports.py:18-36 — High cyclomatic complexity: 14 (≥ 12)
+- cqia/parsing/ts_parser.py:16-59 — High cyclomatic complexity: 13 (≥ 12)
+- cqia/rag/chunking/ast_chunker.py:42-78 — High cyclomatic complexity: 12 (≥ 12)
+- cqia/reporting/markdown.py:185-245 — High cyclomatic complexity: 19 (≥ 12)
+- cqia/reporting/markdown.py:251-282 — High cyclomatic complexity: 14 (≥ 12)
+- cqia/reporting/markdown.py:284-324 — High cyclomatic complexity: 18 (≥ 12)
+- cqia/utils/deps.py:4-59 — High cyclomatic complexity: 19 (≥ 12)
+- cqia/web/service.py:62-125 — High cyclomatic complexity: 14 (≥ 12)
+
+### Duplication (1)
+- cqia\analysis\dependency_graph.py vs cqia\parsing\imports.py — Near-duplicate functions (Jaccard 1.00)
+
+### Performance (0)
+
+### Documentation (210)
+- cqia/__init__.py:1-1 — Missing module docstring
+- cqia/agent/__init__.py:1-1 — Missing module docstring
+- cqia/agent/graph/flow.py:1-1 — Missing module docstring
+- cqia/agent/graph/flow.py:8-14 — Missing function/method docstring: _route_after_guardrails
+- cqia/agent/graph/flow.py:16-30 — Missing function/method docstring: build_cqia_graph
+- cqia/agent/graph/nodes.py:1-1 — Missing module docstring
+- cqia/agent/graph/nodes.py:30-55 — Missing function/method docstring: guardrails
+- cqia/agent/graph/nodes.py:58-120 — Missing function/method docstring: analyze_node
+- cqia/agent/graph/nodes.py:123-152 — Missing function/method docstring: chat_node
+- cqia/agent/graph/state.py:1-1 — Missing module docstring
+- cqia/agent/graph/state.py:6-28 — Missing class docstring: CQIAState
+- cqia/analysis/dependency_graph.py:1-1 — Missing module docstring
+- cqia/analysis/dependency_graph.py:7-8 — Missing function/method docstring: _id
+- cqia/analysis/dependency_graph.py:11-13 — Missing class docstring: DepEdge
+- cqia/analysis/dependency_graph.py:16-21 — Missing class docstring: DepMetrics
+- cqia/analysis/dependency_graph.py:23-46 — Missing function/method docstring: build_dep_graph
+- cqia/analysis/dependency_graph.py:48-55 — Missing function/method docstring: write_dep_json
+- cqia/analysis/detectors/complexity.py:1-1 — Missing module docstring
+- cqia/analysis/detectors/complexity.py:7-15 — Missing class docstring: ComplexityFinding
+- cqia/analysis/detectors/complexity.py:17-33 — Missing function/method docstring: detect_complexity
+- cqia/analysis/detectors/duplication.py:1-1 — Missing module docstring
+- cqia/analysis/detectors/duplication.py:10-21 — Missing function/method docstring: normalize
+- cqia/analysis/detectors/duplication.py:23-26 — Missing function/method docstring: shingles
+- cqia/analysis/detectors/duplication.py:28-33 — Missing function/method docstring: jaccard
+- cqia/analysis/detectors/duplication.py:36-42 — Missing class docstring: DupFinding
+- cqia/analysis/detectors/duplication.py:44-89 — Missing function/method docstring: detect_duplication
+- cqia/analysis/detectors/performance.py:1-1 — Missing module docstring
+- cqia/analysis/detectors/performance.py:20-28 — Missing class docstring: PerfFinding
+- cqia/analysis/detectors/performance.py:30-108 — Missing class docstring: _PerfVisitor
+- cqia/analysis/detectors/performance.py:110-124 — Missing function/method docstring: detect_performance
+- cqia/analysis/detectors/performance.py:31-35 — Missing function/method docstring: __init__
+- cqia/analysis/detectors/performance.py:37-55 — Missing function/method docstring: _call_target
+- cqia/analysis/detectors/performance.py:57-67 — Missing function/method docstring: _mark
+- cqia/analysis/detectors/performance.py:69-72 — Missing function/method docstring: visit_For
+- cqia/analysis/detectors/performance.py:74-77 — Missing function/method docstring: visit_While
+- cqia/analysis/detectors/performance.py:79-92 — Missing function/method docstring: visit_Call
+- cqia/analysis/detectors/performance.py:94-99 — Missing function/method docstring: visit_AugAssign
+- cqia/analysis/detectors/performance.py:101-108 — Missing function/method docstring: visit_Assign
+- cqia/analysis/detectors/security.py:1-1 — Missing module docstring
+- cqia/analysis/detectors/security.py:9-16 — Missing class docstring: SecFinding
+- cqia/analysis/detectors/security.py:19-69 — Missing class docstring: _PySec
+- cqia/analysis/detectors/security.py:71-78 — Missing function/method docstring: scan_python_security
+- cqia/analysis/detectors/security.py:81-115 — Missing function/method docstring: scan_js_security
+- cqia/analysis/detectors/security.py:20-22 — Missing function/method docstring: __init__
+- cqia/analysis/detectors/security.py:24-69 — Missing function/method docstring: visit_Call
+- cqia/analysis/detectors/testing_docs.py:1-1 — Missing module docstring
+- cqia/analysis/detectors/testing_docs.py:12-19 — Missing class docstring: DocFinding
+- cqia/analysis/detectors/testing_docs.py:21-65 — Missing function/method docstring: detect_missing_docstrings
+- cqia/analysis/detectors/testing_docs.py:69-75 — Missing class docstring: TestGapFinding
+- cqia/analysis/detectors/testing_docs.py:84-102 — Missing function/method docstring: expected_test_paths
+- cqia/analysis/detectors/testing_docs.py:104-130 — Missing function/method docstring: detect_test_gaps
+- cqia/analysis/detectors/testing_docs.py:133-147 — Missing function/method docstring: run_testing_and_docs
+- cqia/analysis/runner.py:1-1 — Missing module docstring
+- cqia/analysis/runner.py:42-46 — Missing function/method docstring: _fnum
+- cqia/analysis/runner.py:48-52 — Missing function/method docstring: _norm
+- cqia/analysis/runner.py:54-59 — Missing function/method docstring: _detect_language
+- cqia/analysis/runner.py:61-76 — Missing function/method docstring: _parse_modules
+- cqia/analysis/runner.py:79-84 — Missing class docstring: DepMetricsCompat
+- cqia/analysis/runner.py:86-91 — Missing function/method docstring: _safe_read_imports
+- cqia/analysis/runner.py:93-182 — Missing function/method docstring: analyze_repository
+- cqia/analysis/runner.py:185-197 — Missing function/method docstring: _safe_span
+- cqia/analysis/runner.py:199-201 — Missing function/method docstring: _nonempty_title
+- cqia/analysis/runner.py:203-296 — Missing function/method docstring: _score_all_findings
+- cqia/analysis/runner.py:298-410 — Missing function/method docstring: run_analysis
+- cqia/analysis/runner.py:215-230 — Missing function/method docstring: _push
+- cqia/analysis/severity.py:1-1 — Missing module docstring
+- cqia/analysis/severity.py:8-19 — Missing class docstring: ScoredFinding
+- cqia/analysis/severity.py:39-40 — Missing function/method docstring: _clamp01
+- cqia/analysis/severity.py:42-49 — Missing function/method docstring: _to_severity
+- cqia/analysis/severity.py:51-56 — Missing function/method docstring: combine_with_context
+- cqia/analysis/severity.py:58-59 — Missing function/method docstring: score_security
+- cqia/analysis/severity.py:61-63 — Missing function/method docstring: score_complexity
+- cqia/analysis/severity.py:65-66 — Missing function/method docstring: score_duplication
+- cqia/analysis/severity.py:68-69 — Missing function/method docstring: score_performance_base
+- cqia/analysis/severity.py:71-72 — Missing function/method docstring: score_testing_base
+- cqia/analysis/severity.py:74-75 — Missing function/method docstring: score_documentation_base
+- cqia/analysis/severity.py:77-78 — Missing function/method docstring: pick_severity
+- cqia/analysis/severity.py:80-93 — Missing function/method docstring: explain
+- cqia/analysis/severity.py:95-116 — Missing function/method docstring: fix_text
+- cqia/analysis/severity.py:118-128 — Missing function/method docstring: override_weights
+- cqia/cli/__init__.py:1-1 — Missing module docstring
+- cqia/cli/main.py:1-1 — Missing module docstring
+- cqia/cli/main.py:53-63 — Missing function/method docstring: _clone_or_use
+- cqia/cli/main.py:240-260 — Missing function/method docstring: graph_analyze
+- cqia/cli/main.py:264-279 — Missing function/method docstring: graph_chat
+- cqia/cli/main.py:283-389 — Missing function/method docstring: analyze
+- cqia/cli/main.py:467-570 — Missing function/method docstring: tune
+- cqia/cli/main.py:176-177 — Missing function/method docstring: trim_text
+- cqia/cli/main.py:186-191 — Missing function/method docstring: render_snippet
+- cqia/cli/main.py:423-425 — Missing function/method docstring: _chunk_file
+- cqia/cli/main.py:512-519 — Missing function/method docstring: _collect_complexity
+- cqia/core/__init__.py:1-1 — Missing module docstring
+- cqia/core/config.py:1-1 — Missing module docstring
+- cqia/core/config.py:7-17 — Missing class docstring: AnalyzeConfig
+- cqia/core/config.py:15-17 — Missing function/method docstring: resolve_output_dir
+- cqia/ingestion/__init__.py:1-1 — Missing module docstring
+- cqia/ingestion/walker.py:1-1 — Missing module docstring
+- cqia/ingestion/walker.py:15-19 — Missing class docstring: FileMeta
+- cqia/ingestion/walker.py:40-41 — Missing function/method docstring: detect_language
+- cqia/ingestion/walker.py:43-57 — Missing function/method docstring: _compile_gitignore
+- cqia/ingestion/walker.py:59-64 — Missing function/method docstring: _matches_any
+- cqia/ingestion/walker.py:66-130 — Missing function/method docstring: walk_repo
+- cqia/integrations/github_pr.py:1-1 — Missing module docstring
+- cqia/integrations/github_pr.py:7-40 — Missing class docstring: GitHubPRClient
+- cqia/integrations/github_pr.py:8-12 — Missing function/method docstring: __init__
+- cqia/integrations/github_pr.py:14-19 — Missing function/method docstring: _headers
+- cqia/integrations/github_pr.py:21-26 — Missing function/method docstring: comment_issue
+- cqia/integrations/github_pr.py:28-40 — Missing function/method docstring: review_comment_on_pr
+- cqia/parsing/imports.py:1-1 — Missing module docstring
+- cqia/parsing/imports.py:15-16 — Missing function/method docstring: _s
+- cqia/parsing/imports.py:18-36 — Missing function/method docstring: _py_imports
+- cqia/parsing/imports.py:38-52 — Missing function/method docstring: _js_imports
+- cqia/parsing/imports.py:54-63 — Missing function/method docstring: read_imports
+- cqia/parsing/ir.py:1-1 — Missing module docstring
+- cqia/parsing/ir.py:9-12 — Missing class docstring: Span
+- cqia/parsing/ir.py:15-22 — Missing class docstring: FunctionIR
+- cqia/parsing/ir.py:25-28 — Missing class docstring: ModuleIR
+- cqia/parsing/python_parser.py:1-1 — Missing module docstring
+- cqia/parsing/python_parser.py:9-13 — Missing function/method docstring: _get_source_segment
+- cqia/parsing/python_parser.py:15-22 — Missing function/method docstring: _complexity_count
+- cqia/parsing/python_parser.py:24-44 — Missing function/method docstring: parse_python
+- cqia/parsing/ts_parser.py:1-1 — Missing module docstring
+- cqia/parsing/ts_parser.py:12-14 — Missing function/method docstring: _fallback_module
+- cqia/parsing/ts_parser.py:16-59 — Missing function/method docstring: parse_js_ts
+- cqia/presets/__init__.py:1-1 — Missing module docstring
+- cqia/presets/__init__.py:14-24 — Missing function/method docstring: load_rules
+- cqia/presets/__init__.py:26-31 — Missing function/method docstring: save_rules
+- cqia/qa/__init__.py:1-1 — Missing module docstring
+- cqia/qa/artifacts.py:1-1 — Missing module docstring
+- cqia/qa/chain.py:1-1 — Missing module docstring
+- cqia/qa/chain.py:10-12 — Missing function/method docstring: build_chatgroq_llm
+- cqia/qa/chain.py:14-16 — Missing function/method docstring: build_qa_chain
+- cqia/qa/chain.py:18-34 — Missing function/method docstring: answer_with_citations
+- cqia/qa/prompt.py:1-1 — Missing module docstring
+- cqia/qa/prompt.py:30-40 — Missing function/method docstring: format_context
+- cqia/rag/__init__.py:1-1 — Missing module docstring
+- cqia/rag/chunking/__init__.py:1-1 — Missing module docstring
+- cqia/rag/chunking/ast_chunker.py:13-23 — Missing class docstring: CodeChunk
+- cqia/rag/chunking/ast_chunker.py:25-253 — Missing class docstring: ASTFunctionChunker
+- cqia/rag/chunking/ast_chunker.py:26-33 — Missing function/method docstring: __init__
+- cqia/rag/chunking/ast_chunker.py:35-40 — Missing function/method docstring: extract_chunks
+- cqia/rag/chunking/ast_chunker.py:42-78 — Missing function/method docstring: _extract_python_chunks
+- cqia/rag/chunking/ast_chunker.py:80-109 — Missing function/method docstring: _extract_function_chunk
+- cqia/rag/chunking/ast_chunker.py:111-134 — Missing function/method docstring: _extract_class_chunk
+- cqia/rag/chunking/ast_chunker.py:136-168 — Missing function/method docstring: _extract_js_chunks
+- cqia/rag/chunking/ast_chunker.py:170-181 — Missing function/method docstring: _find_js_end
+- cqia/rag/chunking/ast_chunker.py:183-202 — Missing function/method docstring: _extract_jsdoc
+- cqia/rag/chunking/ast_chunker.py:204-217 — Missing function/method docstring: _extract_generic_chunks
+- cqia/rag/chunking/ast_chunker.py:219-228 — Missing function/method docstring: _complexity
+- cqia/rag/chunking/ast_chunker.py:230-253 — Missing function/method docstring: chunks_to_documents
+- cqia/rag/embeddings/__init__.py:1-1 — Missing module docstring
+- cqia/rag/embeddings/vector_store.py:13-123 — Missing class docstring: CodeVectorStore
+- cqia/rag/embeddings/vector_store.py:125-149 — Missing class docstring: CodeEmbeddingManager
+- cqia/rag/embeddings/vector_store.py:14-40 — Missing function/method docstring: __init__
+- cqia/rag/embeddings/vector_store.py:42-50 — Missing function/method docstring: add_documents
+- cqia/rag/embeddings/vector_store.py:53-68 — Missing function/method docstring: delete_by_file_path
+- cqia/rag/embeddings/vector_store.py:70-72 — Missing function/method docstring: update_documents
+- cqia/rag/embeddings/vector_store.py:74-81 — Missing function/method docstring: as_retriever
+- cqia/rag/embeddings/vector_store.py:83-86 — Missing function/method docstring: similarity_search_with_score
+- cqia/rag/embeddings/vector_store.py:88-110 — Missing function/method docstring: get_collection_stats
+- cqia/rag/embeddings/vector_store.py:112-123 — Missing function/method docstring: reset_collection
+- cqia/rag/embeddings/vector_store.py:126-127 — Missing function/method docstring: __init__
+- cqia/rag/embeddings/vector_store.py:129-143 — Missing function/method docstring: index_repository
+- cqia/rag/embeddings/vector_store.py:145-146 — Missing function/method docstring: get_stats
+- cqia/rag/embeddings/vector_store.py:148-149 — Missing function/method docstring: search
+- cqia/rag/retrieval/__init__.py:1-1 — Missing module docstring
+- cqia/rag/retrieval/smart_retriever.py:1-1 — Missing module docstring
+- cqia/rag/retrieval/smart_retriever.py:46-75 — Missing class docstring: FileAwareRetriever
+- cqia/rag/retrieval/smart_retriever.py:55-72 — Missing function/method docstring: _get_relevant_documents
+- cqia/rag/retrieval/smart_retriever.py:74-75 — Missing function/method docstring: _identifiers
+- cqia/reporting/__init__.py:1-1 — Missing module docstring
+- cqia/reporting/exporters.py:1-1 — Missing module docstring
+- cqia/reporting/exporters.py:8-10 — Missing function/method docstring: export_dependency_graph
+- cqia/reporting/exporters.py:12-26 — Missing function/method docstring: export_json_report
+- cqia/reporting/markdown.py:1-1 — Missing module docstring
+- cqia/reporting/markdown.py:16-28 — Missing function/method docstring: _f
+- cqia/reporting/markdown.py:30-40 — Missing function/method docstring: _as_int
+- cqia/reporting/markdown.py:42-46 — Missing function/method docstring: _i
+- cqia/reporting/markdown.py:48-54 — Missing function/method docstring: _get
+- cqia/reporting/markdown.py:59-66 — Missing function/method docstring: _toc
+- cqia/reporting/markdown.py:68-97 — Missing function/method docstring: write_basic_report
+- cqia/reporting/markdown.py:102-122 — Missing function/method docstring: append_top_issues
+- cqia/reporting/markdown.py:124-147 — Missing function/method docstring: append_per_category_summary
+- cqia/reporting/markdown.py:149-180 — Missing function/method docstring: append_issue_details
+- cqia/reporting/markdown.py:185-245 — Missing function/method docstring: append_findings
+- cqia/reporting/markdown.py:251-282 — Missing function/method docstring: append_dependencies
+- cqia/reporting/markdown.py:284-324 — Missing function/method docstring: append_dependency_outline
+- cqia/reporting/schema.py:1-1 — Missing module docstring
+- cqia/reporting/schema.py:8-11 — Missing class docstring: LocationJSON
+- cqia/reporting/schema.py:13-23 — Missing class docstring: FindingJSON
+- cqia/reporting/schema.py:25-30 — Missing class docstring: DepMetricsJSON
+- cqia/reporting/schema.py:32-34 — Missing class docstring: ScanSummaryJSON
+- cqia/reporting/schema.py:36-39 — Missing class docstring: ReportJSON
+- cqia/utils/deps.py:1-1 — Missing module docstring
+- cqia/utils/deps.py:20-30 — Missing function/method docstring: _as_int
+- cqia/utils/deps.py:41-52 — Missing function/method docstring: _pairize
+- cqia/web/api.py:1-1 — Missing module docstring
+- cqia/web/clone.py:1-1 — Missing module docstring
+- cqia/web/clone.py:13-18 — Missing function/method docstring: _safe_repo_dir_name
+- cqia/web/clone.py:24-29 — Missing function/method docstring: onerror
+- cqia/web/service.py:1-1 — Missing module docstring
+- cqia/web/service.py:39-40 — Missing function/method docstring: health
+- cqia/web/service.py:45-51 — Missing class docstring: AnalyzeRequest
+- cqia/web/service.py:53-59 — Missing class docstring: AnalyzeResponse
+- cqia/web/service.py:62-125 — Missing function/method docstring: api_analyze
+- cqia/web/ui_app.py:1-1 — Missing module docstring
+- cqia/web/ui_app.py:20-31 — Missing function/method docstring: _from_secrets
+- cqia/web/ui_app.py:33-41 — Missing function/method docstring: _resolve_api_base
+- cqia/web/ui_app.py:71-81 — Missing function/method docstring: _render_report
+- cqia/web/ui_app.py:83-94 — Missing function/method docstring: _render_json
+
+### Testing (45)
+- cqia/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/__init___test.py'), WindowsPath('cqia/test___init__.py'), WindowsPath('cqia/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/agent/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/agent/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/agent/__init___test.py'), WindowsPath('cqia/agent/test___init__.py'), WindowsPath('cqia/agent/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/agent/graph/flow.py — Missing mapped test ⇒ [WindowsPath('tests/test_flow.py'), WindowsPath('tests/cqia/agent/graph/test_flow.py'), WindowsPath('tests/flow_test.py'), WindowsPath('tests/cqia/agent/graph/flow_test.py'), WindowsPath('cqia/agent/graph/test_flow.py'), WindowsPath('cqia/agent/graph/flow_test.py')] — Hint: Create a pytest file like tests/test_flow.py and add at least one test.
+- cqia/agent/graph/nodes.py — Missing mapped test ⇒ [WindowsPath('tests/test_nodes.py'), WindowsPath('tests/cqia/agent/graph/test_nodes.py'), WindowsPath('tests/nodes_test.py'), WindowsPath('tests/cqia/agent/graph/nodes_test.py'), WindowsPath('cqia/agent/graph/test_nodes.py'), WindowsPath('cqia/agent/graph/nodes_test.py')] — Hint: Create a pytest file like tests/test_nodes.py and add at least one test.
+- cqia/agent/graph/state.py — Missing mapped test ⇒ [WindowsPath('tests/test_state.py'), WindowsPath('tests/cqia/agent/graph/test_state.py'), WindowsPath('tests/state_test.py'), WindowsPath('tests/cqia/agent/graph/state_test.py'), WindowsPath('cqia/agent/graph/test_state.py'), WindowsPath('cqia/agent/graph/state_test.py')] — Hint: Create a pytest file like tests/test_state.py and add at least one test.
+- cqia/analysis/dependency_graph.py — Missing mapped test ⇒ [WindowsPath('tests/test_dependency_graph.py'), WindowsPath('tests/cqia/analysis/test_dependency_graph.py'), WindowsPath('tests/dependency_graph_test.py'), WindowsPath('tests/cqia/analysis/dependency_graph_test.py'), WindowsPath('cqia/analysis/test_dependency_graph.py'), WindowsPath('cqia/analysis/dependency_graph_test.py')] — Hint: Create a pytest file like tests/test_dependency_graph.py and add at least one test.
+- cqia/analysis/detectors/complexity.py — Missing mapped test ⇒ [WindowsPath('tests/test_complexity.py'), WindowsPath('tests/cqia/analysis/detectors/test_complexity.py'), WindowsPath('tests/complexity_test.py'), WindowsPath('tests/cqia/analysis/detectors/complexity_test.py'), WindowsPath('cqia/analysis/detectors/test_complexity.py'), WindowsPath('cqia/analysis/detectors/complexity_test.py')] — Hint: Create a pytest file like tests/test_complexity.py and add at least one test.
+- cqia/analysis/detectors/duplication.py — Missing mapped test ⇒ [WindowsPath('tests/test_duplication.py'), WindowsPath('tests/cqia/analysis/detectors/test_duplication.py'), WindowsPath('tests/duplication_test.py'), WindowsPath('tests/cqia/analysis/detectors/duplication_test.py'), WindowsPath('cqia/analysis/detectors/test_duplication.py'), WindowsPath('cqia/analysis/detectors/duplication_test.py')] — Hint: Create a pytest file like tests/test_duplication.py and add at least one test.
+- cqia/analysis/detectors/performance.py — Missing mapped test ⇒ [WindowsPath('tests/test_performance.py'), WindowsPath('tests/cqia/analysis/detectors/test_performance.py'), WindowsPath('tests/performance_test.py'), WindowsPath('tests/cqia/analysis/detectors/performance_test.py'), WindowsPath('cqia/analysis/detectors/test_performance.py'), WindowsPath('cqia/analysis/detectors/performance_test.py')] — Hint: Create a pytest file like tests/test_performance.py and add at least one test.
+- cqia/analysis/detectors/security.py — Missing mapped test ⇒ [WindowsPath('tests/test_security.py'), WindowsPath('tests/cqia/analysis/detectors/test_security.py'), WindowsPath('tests/security_test.py'), WindowsPath('tests/cqia/analysis/detectors/security_test.py'), WindowsPath('cqia/analysis/detectors/test_security.py'), WindowsPath('cqia/analysis/detectors/security_test.py')] — Hint: Create a pytest file like tests/test_security.py and add at least one test.
+- cqia/analysis/detectors/testing_docs.py — Missing mapped test ⇒ [WindowsPath('tests/test_testing_docs.py'), WindowsPath('tests/cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('tests/testing_docs_test.py'), WindowsPath('tests/cqia/analysis/detectors/testing_docs_test.py'), WindowsPath('cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('cqia/analysis/detectors/testing_docs_test.py')] — Hint: Create a pytest file like tests/test_testing_docs.py and add at least one test.
+- cqia/analysis/runner.py — Missing mapped test ⇒ [WindowsPath('tests/test_runner.py'), WindowsPath('tests/cqia/analysis/test_runner.py'), WindowsPath('tests/runner_test.py'), WindowsPath('tests/cqia/analysis/runner_test.py'), WindowsPath('cqia/analysis/test_runner.py'), WindowsPath('cqia/analysis/runner_test.py')] — Hint: Create a pytest file like tests/test_runner.py and add at least one test.
+- cqia/analysis/severity.py — Missing mapped test ⇒ [WindowsPath('tests/test_severity.py'), WindowsPath('tests/cqia/analysis/test_severity.py'), WindowsPath('tests/severity_test.py'), WindowsPath('tests/cqia/analysis/severity_test.py'), WindowsPath('cqia/analysis/test_severity.py'), WindowsPath('cqia/analysis/severity_test.py')] — Hint: Create a pytest file like tests/test_severity.py and add at least one test.
+- cqia/cli/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/cli/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/cli/__init___test.py'), WindowsPath('cqia/cli/test___init__.py'), WindowsPath('cqia/cli/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/cli/main.py — Missing mapped test ⇒ [WindowsPath('tests/test_main.py'), WindowsPath('tests/cqia/cli/test_main.py'), WindowsPath('tests/main_test.py'), WindowsPath('tests/cqia/cli/main_test.py'), WindowsPath('cqia/cli/test_main.py'), WindowsPath('cqia/cli/main_test.py')] — Hint: Create a pytest file like tests/test_main.py and add at least one test.
+- cqia/core/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/core/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/core/__init___test.py'), WindowsPath('cqia/core/test___init__.py'), WindowsPath('cqia/core/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/core/config.py — Missing mapped test ⇒ [WindowsPath('tests/test_config.py'), WindowsPath('tests/cqia/core/test_config.py'), WindowsPath('tests/config_test.py'), WindowsPath('tests/cqia/core/config_test.py'), WindowsPath('cqia/core/test_config.py'), WindowsPath('cqia/core/config_test.py')] — Hint: Create a pytest file like tests/test_config.py and add at least one test.
+- cqia/ingestion/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/ingestion/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/ingestion/__init___test.py'), WindowsPath('cqia/ingestion/test___init__.py'), WindowsPath('cqia/ingestion/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/ingestion/walker.py — Missing mapped test ⇒ [WindowsPath('tests/test_walker.py'), WindowsPath('tests/cqia/ingestion/test_walker.py'), WindowsPath('tests/walker_test.py'), WindowsPath('tests/cqia/ingestion/walker_test.py'), WindowsPath('cqia/ingestion/test_walker.py'), WindowsPath('cqia/ingestion/walker_test.py')] — Hint: Create a pytest file like tests/test_walker.py and add at least one test.
+- cqia/integrations/github_pr.py — Missing mapped test ⇒ [WindowsPath('tests/test_github_pr.py'), WindowsPath('tests/cqia/integrations/test_github_pr.py'), WindowsPath('tests/github_pr_test.py'), WindowsPath('tests/cqia/integrations/github_pr_test.py'), WindowsPath('cqia/integrations/test_github_pr.py'), WindowsPath('cqia/integrations/github_pr_test.py')] — Hint: Create a pytest file like tests/test_github_pr.py and add at least one test.
+- cqia/parsing/imports.py — Missing mapped test ⇒ [WindowsPath('tests/test_imports.py'), WindowsPath('tests/cqia/parsing/test_imports.py'), WindowsPath('tests/imports_test.py'), WindowsPath('tests/cqia/parsing/imports_test.py'), WindowsPath('cqia/parsing/test_imports.py'), WindowsPath('cqia/parsing/imports_test.py')] — Hint: Create a pytest file like tests/test_imports.py and add at least one test.
+- cqia/parsing/ir.py — Missing mapped test ⇒ [WindowsPath('tests/test_ir.py'), WindowsPath('tests/cqia/parsing/test_ir.py'), WindowsPath('tests/ir_test.py'), WindowsPath('tests/cqia/parsing/ir_test.py'), WindowsPath('cqia/parsing/test_ir.py'), WindowsPath('cqia/parsing/ir_test.py')] — Hint: Create a pytest file like tests/test_ir.py and add at least one test.
+- cqia/parsing/python_parser.py — Missing mapped test ⇒ [WindowsPath('tests/test_python_parser.py'), WindowsPath('tests/cqia/parsing/test_python_parser.py'), WindowsPath('tests/python_parser_test.py'), WindowsPath('tests/cqia/parsing/python_parser_test.py'), WindowsPath('cqia/parsing/test_python_parser.py'), WindowsPath('cqia/parsing/python_parser_test.py')] — Hint: Create a pytest file like tests/test_python_parser.py and add at least one test.
+- cqia/parsing/ts_parser.py — Missing mapped test ⇒ [WindowsPath('tests/test_ts_parser.py'), WindowsPath('tests/cqia/parsing/test_ts_parser.py'), WindowsPath('tests/ts_parser_test.py'), WindowsPath('tests/cqia/parsing/ts_parser_test.py'), WindowsPath('cqia/parsing/test_ts_parser.py'), WindowsPath('cqia/parsing/ts_parser_test.py')] — Hint: Create a pytest file like tests/test_ts_parser.py and add at least one test.
+- cqia/presets/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/presets/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/presets/__init___test.py'), WindowsPath('cqia/presets/test___init__.py'), WindowsPath('cqia/presets/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/qa/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/qa/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/qa/__init___test.py'), WindowsPath('cqia/qa/test___init__.py'), WindowsPath('cqia/qa/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/qa/artifacts.py — Missing mapped test ⇒ [WindowsPath('tests/test_artifacts.py'), WindowsPath('tests/cqia/qa/test_artifacts.py'), WindowsPath('tests/artifacts_test.py'), WindowsPath('tests/cqia/qa/artifacts_test.py'), WindowsPath('cqia/qa/test_artifacts.py'), WindowsPath('cqia/qa/artifacts_test.py')] — Hint: Create a pytest file like tests/test_artifacts.py and add at least one test.
+- cqia/qa/chain.py — Missing mapped test ⇒ [WindowsPath('tests/test_chain.py'), WindowsPath('tests/cqia/qa/test_chain.py'), WindowsPath('tests/chain_test.py'), WindowsPath('tests/cqia/qa/chain_test.py'), WindowsPath('cqia/qa/test_chain.py'), WindowsPath('cqia/qa/chain_test.py')] — Hint: Create a pytest file like tests/test_chain.py and add at least one test.
+- cqia/qa/prompt.py — Missing mapped test ⇒ [WindowsPath('tests/test_prompt.py'), WindowsPath('tests/cqia/qa/test_prompt.py'), WindowsPath('tests/prompt_test.py'), WindowsPath('tests/cqia/qa/prompt_test.py'), WindowsPath('cqia/qa/test_prompt.py'), WindowsPath('cqia/qa/prompt_test.py')] — Hint: Create a pytest file like tests/test_prompt.py and add at least one test.
+- cqia/rag/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/__init___test.py'), WindowsPath('cqia/rag/test___init__.py'), WindowsPath('cqia/rag/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/rag/chunking/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/chunking/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/chunking/__init___test.py'), WindowsPath('cqia/rag/chunking/test___init__.py'), WindowsPath('cqia/rag/chunking/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/rag/chunking/ast_chunker.py — Missing mapped test ⇒ [WindowsPath('tests/test_ast_chunker.py'), WindowsPath('tests/cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('tests/ast_chunker_test.py'), WindowsPath('tests/cqia/rag/chunking/ast_chunker_test.py'), WindowsPath('cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('cqia/rag/chunking/ast_chunker_test.py')] — Hint: Create a pytest file like tests/test_ast_chunker.py and add at least one test.
+- cqia/rag/embeddings/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/embeddings/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/embeddings/__init___test.py'), WindowsPath('cqia/rag/embeddings/test___init__.py'), WindowsPath('cqia/rag/embeddings/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/rag/embeddings/vector_store.py — Missing mapped test ⇒ [WindowsPath('tests/test_vector_store.py'), WindowsPath('tests/cqia/rag/embeddings/test_vector_store.py'), WindowsPath('tests/vector_store_test.py'), WindowsPath('tests/cqia/rag/embeddings/vector_store_test.py'), WindowsPath('cqia/rag/embeddings/test_vector_store.py'), WindowsPath('cqia/rag/embeddings/vector_store_test.py')] — Hint: Create a pytest file like tests/test_vector_store.py and add at least one test.
+- cqia/rag/retrieval/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/retrieval/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/retrieval/__init___test.py'), WindowsPath('cqia/rag/retrieval/test___init__.py'), WindowsPath('cqia/rag/retrieval/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/rag/retrieval/smart_retriever.py — Missing mapped test ⇒ [WindowsPath('tests/test_smart_retriever.py'), WindowsPath('tests/cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('tests/smart_retriever_test.py'), WindowsPath('tests/cqia/rag/retrieval/smart_retriever_test.py'), WindowsPath('cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('cqia/rag/retrieval/smart_retriever_test.py')] — Hint: Create a pytest file like tests/test_smart_retriever.py and add at least one test.
+- cqia/reporting/__init__.py — Missing mapped test ⇒ [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/reporting/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/reporting/__init___test.py'), WindowsPath('cqia/reporting/test___init__.py'), WindowsPath('cqia/reporting/__init___test.py')] — Hint: Create a pytest file like tests/test___init__.py and add at least one test.
+- cqia/reporting/exporters.py — Missing mapped test ⇒ [WindowsPath('tests/test_exporters.py'), WindowsPath('tests/cqia/reporting/test_exporters.py'), WindowsPath('tests/exporters_test.py'), WindowsPath('tests/cqia/reporting/exporters_test.py'), WindowsPath('cqia/reporting/test_exporters.py'), WindowsPath('cqia/reporting/exporters_test.py')] — Hint: Create a pytest file like tests/test_exporters.py and add at least one test.
+- cqia/reporting/markdown.py — Missing mapped test ⇒ [WindowsPath('tests/test_markdown.py'), WindowsPath('tests/cqia/reporting/test_markdown.py'), WindowsPath('tests/markdown_test.py'), WindowsPath('tests/cqia/reporting/markdown_test.py'), WindowsPath('cqia/reporting/test_markdown.py'), WindowsPath('cqia/reporting/markdown_test.py')] — Hint: Create a pytest file like tests/test_markdown.py and add at least one test.
+- cqia/reporting/schema.py — Missing mapped test ⇒ [WindowsPath('tests/test_schema.py'), WindowsPath('tests/cqia/reporting/test_schema.py'), WindowsPath('tests/schema_test.py'), WindowsPath('tests/cqia/reporting/schema_test.py'), WindowsPath('cqia/reporting/test_schema.py'), WindowsPath('cqia/reporting/schema_test.py')] — Hint: Create a pytest file like tests/test_schema.py and add at least one test.
+- cqia/utils/deps.py — Missing mapped test ⇒ [WindowsPath('tests/test_deps.py'), WindowsPath('tests/cqia/utils/test_deps.py'), WindowsPath('tests/deps_test.py'), WindowsPath('tests/cqia/utils/deps_test.py'), WindowsPath('cqia/utils/test_deps.py'), WindowsPath('cqia/utils/deps_test.py')] — Hint: Create a pytest file like tests/test_deps.py and add at least one test.
+- cqia/web/api.py — Missing mapped test ⇒ [WindowsPath('tests/test_api.py'), WindowsPath('tests/cqia/web/test_api.py'), WindowsPath('tests/api_test.py'), WindowsPath('tests/cqia/web/api_test.py'), WindowsPath('cqia/web/test_api.py'), WindowsPath('cqia/web/api_test.py')] — Hint: Create a pytest file like tests/test_api.py and add at least one test.
+- cqia/web/clone.py — Missing mapped test ⇒ [WindowsPath('tests/test_clone.py'), WindowsPath('tests/cqia/web/test_clone.py'), WindowsPath('tests/clone_test.py'), WindowsPath('tests/cqia/web/clone_test.py'), WindowsPath('cqia/web/test_clone.py'), WindowsPath('cqia/web/clone_test.py')] — Hint: Create a pytest file like tests/test_clone.py and add at least one test.
+- cqia/web/service.py — Missing mapped test ⇒ [WindowsPath('tests/test_service.py'), WindowsPath('tests/cqia/web/test_service.py'), WindowsPath('tests/service_test.py'), WindowsPath('tests/cqia/web/service_test.py'), WindowsPath('cqia/web/test_service.py'), WindowsPath('cqia/web/service_test.py')] — Hint: Create a pytest file like tests/test_service.py and add at least one test.
+- cqia/web/ui_app.py — Missing mapped test ⇒ [WindowsPath('tests/test_ui_app.py'), WindowsPath('tests/cqia/web/test_ui_app.py'), WindowsPath('tests/ui_app_test.py'), WindowsPath('tests/cqia/web/ui_app_test.py'), WindowsPath('cqia/web/test_ui_app.py'), WindowsPath('cqia/web/ui_app_test.py')] — Hint: Create a pytest file like tests/test_ui_app.py and add at least one test.
+
+## Dependencies
+- Nodes: 109
+- Top fan-in:
+  - ['__future__']: 33
+  - ['typing']: 28
+  - ['pathlib']: 21
+  - ['dataclasses']: 12
+  - ['cqia', 'parsing', 'ir']: 8
+- Top fan-out:
+  - main: 26
+  - runner: 18
+  - nodes: 15
+  - service: 13
+  - ui_app: 13
+- Cycles detected: 0
+
+## Dependency outline
+- Graph summary:
+  - Nodes: 109
+  - Edges: 234
+- Top fan-in modules:
+  - ['__future__']: 33
+  - ['typing']: 28
+  - ['pathlib']: 21
+  - ['dataclasses']: 12
+  - ['cqia', 'parsing', 'ir']: 8
+- Top fan-out modules:
+  - main: 26
+  - runner: 18
+  - nodes: 15
+  - service: 13
+  - ui_app: 13
+- Cycles: 0
+- Hotspots (fan-in × complexity):
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)
+  - path — score 0.00 (fan-in 0, complexity 0)

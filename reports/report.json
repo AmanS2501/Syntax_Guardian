@@ -1,0 +1,4177 @@
+{
+  "summary": {
+    "files_scanned": 45,
+    "by_language": {
+      "python": 45,
+      "javascript": 0,
+      "typescript": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "cqia/agent/graph/nodes.py::chat_node:123#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.049999999999999996,
+      "title": "High cyclomatic complexity: 14 (\u2265 12)",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 123,
+      "end_line": 152,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 14.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::detect_duplication:44#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.15,
+      "title": "High cyclomatic complexity: 18 (\u2265 12)",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 44,
+      "end_line": 89,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 18.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::visit_Call:24#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.15,
+      "title": "High cyclomatic complexity: 18 (\u2265 12)",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 24,
+      "end_line": 69,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 18.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::analyze_repository:93#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "High cyclomatic complexity: 24 (\u2265 12)",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 93,
+      "end_line": 182,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 24.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::_score_all_findings:203#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.17500000000000002,
+      "title": "High cyclomatic complexity: 19 (\u2265 12)",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 203,
+      "end_line": 296,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 19.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::fix_text:95#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.024999999999999998,
+      "title": "High cyclomatic complexity: 13 (\u2265 12)",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 95,
+      "end_line": 116,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 13.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::chat_repo:124#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.125,
+      "title": "High cyclomatic complexity: 17 (\u2265 12)",
+      "file": "cqia/cli/main.py",
+      "start_line": 124,
+      "end_line": 236,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 17.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::analyze:283#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.024999999999999998,
+      "title": "High cyclomatic complexity: 13 (\u2265 12)",
+      "file": "cqia/cli/main.py",
+      "start_line": 283,
+      "end_line": 389,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 13.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::tune:467#complexity",
+      "category": "complexity",
+      "severity": "P2",
+      "score": 0.525,
+      "title": "High cyclomatic complexity: 33 (\u2265 12)",
+      "file": "cqia/cli/main.py",
+      "start_line": 467,
+      "end_line": 570,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 33.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::walk_repo:66#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.27499999999999997,
+      "title": "High cyclomatic complexity: 23 (\u2265 12)",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 66,
+      "end_line": 130,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 23.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::_py_imports:18#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.049999999999999996,
+      "title": "High cyclomatic complexity: 14 (\u2265 12)",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 18,
+      "end_line": 36,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 14.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/parsing/ts_parser.py::parse_js_ts:16#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.024999999999999998,
+      "title": "High cyclomatic complexity: 13 (\u2265 12)",
+      "file": "cqia/parsing/ts_parser.py",
+      "start_line": 16,
+      "end_line": 59,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 13.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::_extract_python_chunks:42#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.0,
+      "title": "High cyclomatic complexity: 12 (\u2265 12)",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 42,
+      "end_line": 78,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 12.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::append_findings:185#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.17500000000000002,
+      "title": "High cyclomatic complexity: 19 (\u2265 12)",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 185,
+      "end_line": 245,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 19.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::append_dependencies:251#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.049999999999999996,
+      "title": "High cyclomatic complexity: 14 (\u2265 12)",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 251,
+      "end_line": 282,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 14.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::append_dependency_outline:284#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.15,
+      "title": "High cyclomatic complexity: 18 (\u2265 12)",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 284,
+      "end_line": 324,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 18.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/utils/deps.py::safe_dep_metrics:4#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.17500000000000002,
+      "title": "High cyclomatic complexity: 19 (\u2265 12)",
+      "file": "cqia/utils/deps.py",
+      "start_line": 4,
+      "end_line": 59,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 19.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/web/service.py::api_analyze:62#complexity",
+      "category": "complexity",
+      "severity": "P3",
+      "score": 0.049999999999999996,
+      "title": "High cyclomatic complexity: 14 (\u2265 12)",
+      "file": "cqia/web/service.py",
+      "start_line": 62,
+      "end_line": 125,
+      "hint": "- Extract helpers; guard-return early; simplify boolean expressions with named predicates.",
+      "extra": {
+        "value": 14.0,
+        "threshold": 12.0
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::_id:7~cqia/parsing/imports.py::_s:15#dup",
+      "category": "duplication",
+      "severity": "P2",
+      "score": 0.5,
+      "title": "Near-duplicate functions (Jaccard 1.00)",
+      "file": "cqia\\analysis\\dependency_graph.py",
+      "start_line": 8,
+      "end_line": 16,
+      "hint": "- Extract common code into a shared function or module (see also cqia\\parsing\\imports.py); add tests for the shared path.",
+      "extra": {
+        "other_file": "cqia\\parsing\\imports.py",
+        "similarity": 1.0,
+        "file_fallback": "cqia\\analysis\\dependency_graph.py"
+      }
+    },
+    {
+      "id": "cqia/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/agent/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/agent/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/flow.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/agent/graph/flow.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/flow.py::doc:function:_route_after_guardrails:8",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _route_after_guardrails",
+      "file": "cqia/agent/graph/flow.py",
+      "start_line": 8,
+      "end_line": 14,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/flow.py::doc:function:build_cqia_graph:16",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: build_cqia_graph",
+      "file": "cqia/agent/graph/flow.py",
+      "start_line": 16,
+      "end_line": 30,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/nodes.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/nodes.py::doc:function:guardrails:30",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: guardrails",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 30,
+      "end_line": 55,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/nodes.py::doc:function:analyze_node:58",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: analyze_node",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 58,
+      "end_line": 120,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/nodes.py::doc:function:chat_node:123",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: chat_node",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 123,
+      "end_line": 152,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/state.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/agent/graph/state.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/state.py::doc:class:CQIAState:6",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: CQIAState",
+      "file": "cqia/agent/graph/state.py",
+      "start_line": 6,
+      "end_line": 28,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:function:_id:7",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _id",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 7,
+      "end_line": 8,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:class:DepEdge:11",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DepEdge",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 11,
+      "end_line": 13,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:class:DepMetrics:16",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DepMetrics",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 16,
+      "end_line": 21,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:function:build_dep_graph:23",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: build_dep_graph",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 23,
+      "end_line": 46,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::doc:function:write_dep_json:48",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: write_dep_json",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 48,
+      "end_line": 55,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/complexity.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/detectors/complexity.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/complexity.py::doc:class:ComplexityFinding:7",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ComplexityFinding",
+      "file": "cqia/analysis/detectors/complexity.py",
+      "start_line": 7,
+      "end_line": 15,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/complexity.py::doc:function:detect_complexity:17",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_complexity",
+      "file": "cqia/analysis/detectors/complexity.py",
+      "start_line": 17,
+      "end_line": 33,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:function:normalize:10",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: normalize",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 10,
+      "end_line": 21,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:function:shingles:23",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: shingles",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 23,
+      "end_line": 26,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:function:jaccard:28",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: jaccard",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 28,
+      "end_line": 33,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:class:DupFinding:36",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DupFinding",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 36,
+      "end_line": 42,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::doc:function:detect_duplication:44",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_duplication",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 44,
+      "end_line": 89,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:class:PerfFinding:20",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: PerfFinding",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 20,
+      "end_line": 28,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:class:_PerfVisitor:30",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: _PerfVisitor",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 30,
+      "end_line": 108,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:detect_performance:110",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_performance",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 110,
+      "end_line": 124,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:__init__:31",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 31,
+      "end_line": 35,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:_call_target:37",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _call_target",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 37,
+      "end_line": 55,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:_mark:57",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _mark",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 57,
+      "end_line": 67,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:visit_For:69",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_For",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 69,
+      "end_line": 72,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:visit_While:74",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_While",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 74,
+      "end_line": 77,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:visit_Call:79",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_Call",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 79,
+      "end_line": 92,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:visit_AugAssign:94",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_AugAssign",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 94,
+      "end_line": 99,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::doc:function:visit_Assign:101",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_Assign",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 101,
+      "end_line": 108,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:class:SecFinding:9",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: SecFinding",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 9,
+      "end_line": 16,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:class:_PySec:19",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: _PySec",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 19,
+      "end_line": 69,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:function:scan_python_security:71",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: scan_python_security",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 71,
+      "end_line": 78,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:function:scan_js_security:81",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: scan_js_security",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 81,
+      "end_line": 115,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:function:__init__:20",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 20,
+      "end_line": 22,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::doc:function:visit_Call:24",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: visit_Call",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 24,
+      "end_line": 69,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:class:DocFinding:12",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DocFinding",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 12,
+      "end_line": 19,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:function:detect_missing_docstrings:21",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_missing_docstrings",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 21,
+      "end_line": 65,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:class:TestGapFinding:69",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: TestGapFinding",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 69,
+      "end_line": 75,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:function:expected_test_paths:84",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: expected_test_paths",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 84,
+      "end_line": 102,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:function:detect_test_gaps:104",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_test_gaps",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 104,
+      "end_line": 130,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::doc:function:run_testing_and_docs:133",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: run_testing_and_docs",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 133,
+      "end_line": 147,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_fnum:42",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _fnum",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 42,
+      "end_line": 46,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_norm:48",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _norm",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 48,
+      "end_line": 52,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_detect_language:54",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _detect_language",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 54,
+      "end_line": 59,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_parse_modules:61",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _parse_modules",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 61,
+      "end_line": 76,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:class:DepMetricsCompat:79",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DepMetricsCompat",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 79,
+      "end_line": 84,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_safe_read_imports:86",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _safe_read_imports",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 86,
+      "end_line": 91,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:analyze_repository:93",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: analyze_repository",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 93,
+      "end_line": 182,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_safe_span:185",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _safe_span",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 185,
+      "end_line": 197,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_nonempty_title:199",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _nonempty_title",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 199,
+      "end_line": 201,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_score_all_findings:203",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _score_all_findings",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 203,
+      "end_line": 296,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:run_analysis:298",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: run_analysis",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 298,
+      "end_line": 410,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::doc:function:_push:215",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _push",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 215,
+      "end_line": 230,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:class:ScoredFinding:8",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ScoredFinding",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 8,
+      "end_line": 19,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:_clamp01:39",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _clamp01",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 39,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:_to_severity:42",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _to_severity",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 42,
+      "end_line": 49,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:combine_with_context:51",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: combine_with_context",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 51,
+      "end_line": 56,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_security:58",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_security",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 58,
+      "end_line": 59,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_complexity:61",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_complexity",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 61,
+      "end_line": 63,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_duplication:65",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_duplication",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 65,
+      "end_line": 66,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_performance_base:68",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_performance_base",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 68,
+      "end_line": 69,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_testing_base:71",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_testing_base",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 71,
+      "end_line": 72,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:score_documentation_base:74",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: score_documentation_base",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 74,
+      "end_line": 75,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:pick_severity:77",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: pick_severity",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 77,
+      "end_line": 78,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:explain:80",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: explain",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 80,
+      "end_line": 93,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:fix_text:95",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: fix_text",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 95,
+      "end_line": 116,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::doc:function:override_weights:118",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: override_weights",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 118,
+      "end_line": 128,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/cli/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/cli/main.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:_clone_or_use:53",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _clone_or_use",
+      "file": "cqia/cli/main.py",
+      "start_line": 53,
+      "end_line": 63,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:graph_analyze:240",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: graph_analyze",
+      "file": "cqia/cli/main.py",
+      "start_line": 240,
+      "end_line": 260,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:graph_chat:264",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: graph_chat",
+      "file": "cqia/cli/main.py",
+      "start_line": 264,
+      "end_line": 279,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:analyze:283",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: analyze",
+      "file": "cqia/cli/main.py",
+      "start_line": 283,
+      "end_line": 389,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:tune:467",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: tune",
+      "file": "cqia/cli/main.py",
+      "start_line": 467,
+      "end_line": 570,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:trim_text:176",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: trim_text",
+      "file": "cqia/cli/main.py",
+      "start_line": 176,
+      "end_line": 177,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:render_snippet:186",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: render_snippet",
+      "file": "cqia/cli/main.py",
+      "start_line": 186,
+      "end_line": 191,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:_chunk_file:423",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _chunk_file",
+      "file": "cqia/cli/main.py",
+      "start_line": 423,
+      "end_line": 425,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::doc:function:_collect_complexity:512",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _collect_complexity",
+      "file": "cqia/cli/main.py",
+      "start_line": 512,
+      "end_line": 519,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/core/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/core/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/core/config.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/core/config.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/core/config.py::doc:class:AnalyzeConfig:7",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: AnalyzeConfig",
+      "file": "cqia/core/config.py",
+      "start_line": 7,
+      "end_line": 17,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/core/config.py::doc:function:resolve_output_dir:15",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: resolve_output_dir",
+      "file": "cqia/core/config.py",
+      "start_line": 15,
+      "end_line": 17,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/ingestion/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/ingestion/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:class:FileMeta:15",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: FileMeta",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 15,
+      "end_line": 19,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:function:detect_language:40",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: detect_language",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 40,
+      "end_line": 41,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:function:_compile_gitignore:43",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _compile_gitignore",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 43,
+      "end_line": 57,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:function:_matches_any:59",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _matches_any",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 59,
+      "end_line": 64,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::doc:function:walk_repo:66",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: walk_repo",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 66,
+      "end_line": 130,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:class:GitHubPRClient:7",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: GitHubPRClient",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 7,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:function:__init__:8",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 8,
+      "end_line": 12,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:function:_headers:14",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _headers",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 14,
+      "end_line": 19,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:function:comment_issue:21",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: comment_issue",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 21,
+      "end_line": 26,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::doc:function:review_comment_on_pr:28",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: review_comment_on_pr",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 28,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::doc:function:_s:15",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _s",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 15,
+      "end_line": 16,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::doc:function:_py_imports:18",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _py_imports",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 18,
+      "end_line": 36,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::doc:function:_js_imports:38",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _js_imports",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 38,
+      "end_line": 52,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::doc:function:read_imports:54",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: read_imports",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 54,
+      "end_line": 63,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/ir.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/parsing/ir.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/parsing/ir.py::doc:class:Span:9",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: Span",
+      "file": "cqia/parsing/ir.py",
+      "start_line": 9,
+      "end_line": 12,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/parsing/ir.py::doc:class:FunctionIR:15",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: FunctionIR",
+      "file": "cqia/parsing/ir.py",
+      "start_line": 15,
+      "end_line": 22,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/parsing/ir.py::doc:class:ModuleIR:25",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ModuleIR",
+      "file": "cqia/parsing/ir.py",
+      "start_line": 25,
+      "end_line": 28,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/parsing/python_parser.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/parsing/python_parser.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/parsing/python_parser.py::doc:function:_get_source_segment:9",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _get_source_segment",
+      "file": "cqia/parsing/python_parser.py",
+      "start_line": 9,
+      "end_line": 13,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/python_parser.py::doc:function:_complexity_count:15",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _complexity_count",
+      "file": "cqia/parsing/python_parser.py",
+      "start_line": 15,
+      "end_line": 22,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/python_parser.py::doc:function:parse_python:24",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: parse_python",
+      "file": "cqia/parsing/python_parser.py",
+      "start_line": 24,
+      "end_line": 44,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/ts_parser.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/parsing/ts_parser.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/parsing/ts_parser.py::doc:function:_fallback_module:12",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _fallback_module",
+      "file": "cqia/parsing/ts_parser.py",
+      "start_line": 12,
+      "end_line": 14,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/parsing/ts_parser.py::doc:function:parse_js_ts:16",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: parse_js_ts",
+      "file": "cqia/parsing/ts_parser.py",
+      "start_line": 16,
+      "end_line": 59,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/presets/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/presets/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/presets/__init__.py::doc:function:load_rules:14",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: load_rules",
+      "file": "cqia/presets/__init__.py",
+      "start_line": 14,
+      "end_line": 24,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/presets/__init__.py::doc:function:save_rules:26",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: save_rules",
+      "file": "cqia/presets/__init__.py",
+      "start_line": 26,
+      "end_line": 31,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/qa/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/qa/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/qa/artifacts.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/qa/artifacts.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/qa/chain.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/qa/chain.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/qa/chain.py::doc:function:build_chatgroq_llm:10",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: build_chatgroq_llm",
+      "file": "cqia/qa/chain.py",
+      "start_line": 10,
+      "end_line": 12,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/qa/chain.py::doc:function:build_qa_chain:14",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: build_qa_chain",
+      "file": "cqia/qa/chain.py",
+      "start_line": 14,
+      "end_line": 16,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/qa/chain.py::doc:function:answer_with_citations:18",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: answer_with_citations",
+      "file": "cqia/qa/chain.py",
+      "start_line": 18,
+      "end_line": 34,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/qa/prompt.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/qa/prompt.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/qa/prompt.py::doc:function:format_context:30",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: format_context",
+      "file": "cqia/qa/prompt.py",
+      "start_line": 30,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/rag/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/rag/chunking/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:class:CodeChunk:13",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: CodeChunk",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 13,
+      "end_line": 23,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:class:ASTFunctionChunker:25",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ASTFunctionChunker",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 25,
+      "end_line": 253,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:__init__:26",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 26,
+      "end_line": 33,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:extract_chunks:35",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: extract_chunks",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 35,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_python_chunks:42",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_python_chunks",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 42,
+      "end_line": 78,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_function_chunk:80",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_function_chunk",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 80,
+      "end_line": 109,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_class_chunk:111",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_class_chunk",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 111,
+      "end_line": 134,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_js_chunks:136",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_js_chunks",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 136,
+      "end_line": 168,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_find_js_end:170",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _find_js_end",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 170,
+      "end_line": 181,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_jsdoc:183",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_jsdoc",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 183,
+      "end_line": 202,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_extract_generic_chunks:204",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _extract_generic_chunks",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 204,
+      "end_line": 217,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:_complexity:219",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _complexity",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 219,
+      "end_line": 228,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::doc:function:chunks_to_documents:230",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: chunks_to_documents",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 230,
+      "end_line": 253,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/rag/embeddings/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:class:CodeVectorStore:13",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: CodeVectorStore",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 13,
+      "end_line": 123,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:class:CodeEmbeddingManager:125",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: CodeEmbeddingManager",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 125,
+      "end_line": 149,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:__init__:14",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 14,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:add_documents:42",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: add_documents",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 42,
+      "end_line": 50,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:delete_by_file_path:53",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: delete_by_file_path",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 53,
+      "end_line": 68,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:update_documents:70",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: update_documents",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 70,
+      "end_line": 72,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:as_retriever:74",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: as_retriever",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 74,
+      "end_line": 81,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:similarity_search_with_score:83",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: similarity_search_with_score",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 83,
+      "end_line": 86,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:get_collection_stats:88",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: get_collection_stats",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 88,
+      "end_line": 110,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:reset_collection:112",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: reset_collection",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 112,
+      "end_line": 123,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:__init__:126",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: __init__",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 126,
+      "end_line": 127,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:index_repository:129",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: index_repository",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 129,
+      "end_line": 143,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:get_stats:145",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: get_stats",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 145,
+      "end_line": 146,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::doc:function:search:148",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: search",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 148,
+      "end_line": 149,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/rag/retrieval/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/smart_retriever.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/rag/retrieval/smart_retriever.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/smart_retriever.py::doc:class:FileAwareRetriever:46",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: FileAwareRetriever",
+      "file": "cqia/rag/retrieval/smart_retriever.py",
+      "start_line": 46,
+      "end_line": 75,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/smart_retriever.py::doc:function:_get_relevant_documents:55",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _get_relevant_documents",
+      "file": "cqia/rag/retrieval/smart_retriever.py",
+      "start_line": 55,
+      "end_line": 72,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/smart_retriever.py::doc:function:_identifiers:74",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _identifiers",
+      "file": "cqia/rag/retrieval/smart_retriever.py",
+      "start_line": 74,
+      "end_line": 75,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/__init__.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/reporting/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/reporting/exporters.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/reporting/exporters.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/reporting/exporters.py::doc:function:export_dependency_graph:8",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: export_dependency_graph",
+      "file": "cqia/reporting/exporters.py",
+      "start_line": 8,
+      "end_line": 10,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/exporters.py::doc:function:export_json_report:12",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: export_json_report",
+      "file": "cqia/reporting/exporters.py",
+      "start_line": 12,
+      "end_line": 26,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:_f:16",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _f",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 16,
+      "end_line": 28,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:_as_int:30",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _as_int",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 30,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:_i:42",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _i",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 42,
+      "end_line": 46,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:_get:48",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _get",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 48,
+      "end_line": 54,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:_toc:59",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _toc",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 59,
+      "end_line": 66,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:write_basic_report:68",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: write_basic_report",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 68,
+      "end_line": 97,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_top_issues:102",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_top_issues",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 102,
+      "end_line": 122,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_per_category_summary:124",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_per_category_summary",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 124,
+      "end_line": 147,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_issue_details:149",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_issue_details",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 149,
+      "end_line": 180,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_findings:185",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_findings",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 185,
+      "end_line": 245,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_dependencies:251",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_dependencies",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 251,
+      "end_line": 282,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::doc:function:append_dependency_outline:284",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: append_dependency_outline",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 284,
+      "end_line": 324,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:class:LocationJSON:8",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: LocationJSON",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 8,
+      "end_line": 11,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:class:FindingJSON:13",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: FindingJSON",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 13,
+      "end_line": 23,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:class:DepMetricsJSON:25",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: DepMetricsJSON",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 25,
+      "end_line": 30,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:class:ScanSummaryJSON:32",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ScanSummaryJSON",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 32,
+      "end_line": 34,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::doc:class:ReportJSON:36",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: ReportJSON",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 36,
+      "end_line": 39,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/utils/deps.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/utils/deps.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/utils/deps.py::doc:function:_as_int:20",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _as_int",
+      "file": "cqia/utils/deps.py",
+      "start_line": 20,
+      "end_line": 30,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/utils/deps.py::doc:function:_pairize:41",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _pairize",
+      "file": "cqia/utils/deps.py",
+      "start_line": 41,
+      "end_line": 52,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/api.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/web/api.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/web/clone.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/web/clone.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/web/clone.py::doc:function:_safe_repo_dir_name:13",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _safe_repo_dir_name",
+      "file": "cqia/web/clone.py",
+      "start_line": 13,
+      "end_line": 18,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/clone.py::doc:function:onerror:24",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: onerror",
+      "file": "cqia/web/clone.py",
+      "start_line": 24,
+      "end_line": 29,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/web/service.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::doc:function:health:39",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: health",
+      "file": "cqia/web/service.py",
+      "start_line": 39,
+      "end_line": 40,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::doc:class:AnalyzeRequest:45",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: AnalyzeRequest",
+      "file": "cqia/web/service.py",
+      "start_line": 45,
+      "end_line": 51,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::doc:class:AnalyzeResponse:53",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing class docstring: AnalyzeResponse",
+      "file": "cqia/web/service.py",
+      "start_line": 53,
+      "end_line": 59,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "class"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::doc:function:api_analyze:62",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: api_analyze",
+      "file": "cqia/web/service.py",
+      "start_line": 62,
+      "end_line": 125,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::doc:module",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing module docstring",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "module"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::doc:function:_from_secrets:20",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _from_secrets",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 20,
+      "end_line": 31,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::doc:function:_resolve_api_base:33",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _resolve_api_base",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 33,
+      "end_line": 41,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::doc:function:_render_report:71",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _render_report",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 71,
+      "end_line": 81,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::doc:function:_render_json:83",
+      "category": "documentation",
+      "severity": "P3",
+      "score": 0.3,
+      "title": "Missing function/method docstring: _render_json",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 83,
+      "end_line": 94,
+      "hint": "- Add module/class/function docstrings (PEP 257) with parameters, returns, and brief examples.",
+      "extra": {
+        "kind": "function"
+      }
+    },
+    {
+      "id": "cqia/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/__init__.py",
+      "file": "cqia/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/__init___test.py'), WindowsPath('cqia/test___init__.py'), WindowsPath('cqia/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/__init___test.py'), WindowsPath('cqia/test___init__.py'), WindowsPath('cqia/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/agent/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/agent/__init__.py",
+      "file": "cqia/agent/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/agent/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/agent/__init___test.py'), WindowsPath('cqia/agent/test___init__.py'), WindowsPath('cqia/agent/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/agent/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/agent/__init___test.py'), WindowsPath('cqia/agent/test___init__.py'), WindowsPath('cqia/agent/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/flow.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/agent/graph/flow.py",
+      "file": "cqia/agent/graph/flow.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_flow.py'), WindowsPath('tests/cqia/agent/graph/test_flow.py'), WindowsPath('tests/flow_test.py'), WindowsPath('tests/cqia/agent/graph/flow_test.py'), WindowsPath('cqia/agent/graph/test_flow.py'), WindowsPath('cqia/agent/graph/flow_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_flow.py'), WindowsPath('tests/cqia/agent/graph/test_flow.py'), WindowsPath('tests/flow_test.py'), WindowsPath('tests/cqia/agent/graph/flow_test.py'), WindowsPath('cqia/agent/graph/test_flow.py'), WindowsPath('cqia/agent/graph/flow_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/nodes.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/agent/graph/nodes.py",
+      "file": "cqia/agent/graph/nodes.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_nodes.py'), WindowsPath('tests/cqia/agent/graph/test_nodes.py'), WindowsPath('tests/nodes_test.py'), WindowsPath('tests/cqia/agent/graph/nodes_test.py'), WindowsPath('cqia/agent/graph/test_nodes.py'), WindowsPath('cqia/agent/graph/nodes_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_nodes.py'), WindowsPath('tests/cqia/agent/graph/test_nodes.py'), WindowsPath('tests/nodes_test.py'), WindowsPath('tests/cqia/agent/graph/nodes_test.py'), WindowsPath('cqia/agent/graph/test_nodes.py'), WindowsPath('cqia/agent/graph/nodes_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/agent/graph/state.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/agent/graph/state.py",
+      "file": "cqia/agent/graph/state.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_state.py'), WindowsPath('tests/cqia/agent/graph/test_state.py'), WindowsPath('tests/state_test.py'), WindowsPath('tests/cqia/agent/graph/state_test.py'), WindowsPath('cqia/agent/graph/test_state.py'), WindowsPath('cqia/agent/graph/state_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_state.py'), WindowsPath('tests/cqia/agent/graph/test_state.py'), WindowsPath('tests/state_test.py'), WindowsPath('tests/cqia/agent/graph/state_test.py'), WindowsPath('cqia/agent/graph/test_state.py'), WindowsPath('cqia/agent/graph/state_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/dependency_graph.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/dependency_graph.py",
+      "file": "cqia/analysis/dependency_graph.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_dependency_graph.py'), WindowsPath('tests/cqia/analysis/test_dependency_graph.py'), WindowsPath('tests/dependency_graph_test.py'), WindowsPath('tests/cqia/analysis/dependency_graph_test.py'), WindowsPath('cqia/analysis/test_dependency_graph.py'), WindowsPath('cqia/analysis/dependency_graph_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_dependency_graph.py'), WindowsPath('tests/cqia/analysis/test_dependency_graph.py'), WindowsPath('tests/dependency_graph_test.py'), WindowsPath('tests/cqia/analysis/dependency_graph_test.py'), WindowsPath('cqia/analysis/test_dependency_graph.py'), WindowsPath('cqia/analysis/dependency_graph_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/complexity.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/detectors/complexity.py",
+      "file": "cqia/analysis/detectors/complexity.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_complexity.py'), WindowsPath('tests/cqia/analysis/detectors/test_complexity.py'), WindowsPath('tests/complexity_test.py'), WindowsPath('tests/cqia/analysis/detectors/complexity_test.py'), WindowsPath('cqia/analysis/detectors/test_complexity.py'), WindowsPath('cqia/analysis/detectors/complexity_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_complexity.py'), WindowsPath('tests/cqia/analysis/detectors/test_complexity.py'), WindowsPath('tests/complexity_test.py'), WindowsPath('tests/cqia/analysis/detectors/complexity_test.py'), WindowsPath('cqia/analysis/detectors/test_complexity.py'), WindowsPath('cqia/analysis/detectors/complexity_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/duplication.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/detectors/duplication.py",
+      "file": "cqia/analysis/detectors/duplication.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_duplication.py'), WindowsPath('tests/cqia/analysis/detectors/test_duplication.py'), WindowsPath('tests/duplication_test.py'), WindowsPath('tests/cqia/analysis/detectors/duplication_test.py'), WindowsPath('cqia/analysis/detectors/test_duplication.py'), WindowsPath('cqia/analysis/detectors/duplication_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_duplication.py'), WindowsPath('tests/cqia/analysis/detectors/test_duplication.py'), WindowsPath('tests/duplication_test.py'), WindowsPath('tests/cqia/analysis/detectors/duplication_test.py'), WindowsPath('cqia/analysis/detectors/test_duplication.py'), WindowsPath('cqia/analysis/detectors/duplication_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/performance.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/detectors/performance.py",
+      "file": "cqia/analysis/detectors/performance.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_performance.py'), WindowsPath('tests/cqia/analysis/detectors/test_performance.py'), WindowsPath('tests/performance_test.py'), WindowsPath('tests/cqia/analysis/detectors/performance_test.py'), WindowsPath('cqia/analysis/detectors/test_performance.py'), WindowsPath('cqia/analysis/detectors/performance_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_performance.py'), WindowsPath('tests/cqia/analysis/detectors/test_performance.py'), WindowsPath('tests/performance_test.py'), WindowsPath('tests/cqia/analysis/detectors/performance_test.py'), WindowsPath('cqia/analysis/detectors/test_performance.py'), WindowsPath('cqia/analysis/detectors/performance_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/security.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/detectors/security.py",
+      "file": "cqia/analysis/detectors/security.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_security.py'), WindowsPath('tests/cqia/analysis/detectors/test_security.py'), WindowsPath('tests/security_test.py'), WindowsPath('tests/cqia/analysis/detectors/security_test.py'), WindowsPath('cqia/analysis/detectors/test_security.py'), WindowsPath('cqia/analysis/detectors/security_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_security.py'), WindowsPath('tests/cqia/analysis/detectors/test_security.py'), WindowsPath('tests/security_test.py'), WindowsPath('tests/cqia/analysis/detectors/security_test.py'), WindowsPath('cqia/analysis/detectors/test_security.py'), WindowsPath('cqia/analysis/detectors/security_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/detectors/testing_docs.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/detectors/testing_docs.py",
+      "file": "cqia/analysis/detectors/testing_docs.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_testing_docs.py'), WindowsPath('tests/cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('tests/testing_docs_test.py'), WindowsPath('tests/cqia/analysis/detectors/testing_docs_test.py'), WindowsPath('cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('cqia/analysis/detectors/testing_docs_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_testing_docs.py'), WindowsPath('tests/cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('tests/testing_docs_test.py'), WindowsPath('tests/cqia/analysis/detectors/testing_docs_test.py'), WindowsPath('cqia/analysis/detectors/test_testing_docs.py'), WindowsPath('cqia/analysis/detectors/testing_docs_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/runner.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/runner.py",
+      "file": "cqia/analysis/runner.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_runner.py'), WindowsPath('tests/cqia/analysis/test_runner.py'), WindowsPath('tests/runner_test.py'), WindowsPath('tests/cqia/analysis/runner_test.py'), WindowsPath('cqia/analysis/test_runner.py'), WindowsPath('cqia/analysis/runner_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_runner.py'), WindowsPath('tests/cqia/analysis/test_runner.py'), WindowsPath('tests/runner_test.py'), WindowsPath('tests/cqia/analysis/runner_test.py'), WindowsPath('cqia/analysis/test_runner.py'), WindowsPath('cqia/analysis/runner_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/analysis/severity.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/analysis/severity.py",
+      "file": "cqia/analysis/severity.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_severity.py'), WindowsPath('tests/cqia/analysis/test_severity.py'), WindowsPath('tests/severity_test.py'), WindowsPath('tests/cqia/analysis/severity_test.py'), WindowsPath('cqia/analysis/test_severity.py'), WindowsPath('cqia/analysis/severity_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_severity.py'), WindowsPath('tests/cqia/analysis/test_severity.py'), WindowsPath('tests/severity_test.py'), WindowsPath('tests/cqia/analysis/severity_test.py'), WindowsPath('cqia/analysis/test_severity.py'), WindowsPath('cqia/analysis/severity_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/cli/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/cli/__init__.py",
+      "file": "cqia/cli/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/cli/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/cli/__init___test.py'), WindowsPath('cqia/cli/test___init__.py'), WindowsPath('cqia/cli/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/cli/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/cli/__init___test.py'), WindowsPath('cqia/cli/test___init__.py'), WindowsPath('cqia/cli/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/cli/main.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/cli/main.py",
+      "file": "cqia/cli/main.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_main.py'), WindowsPath('tests/cqia/cli/test_main.py'), WindowsPath('tests/main_test.py'), WindowsPath('tests/cqia/cli/main_test.py'), WindowsPath('cqia/cli/test_main.py'), WindowsPath('cqia/cli/main_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_main.py'), WindowsPath('tests/cqia/cli/test_main.py'), WindowsPath('tests/main_test.py'), WindowsPath('tests/cqia/cli/main_test.py'), WindowsPath('cqia/cli/test_main.py'), WindowsPath('cqia/cli/main_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/core/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/core/__init__.py",
+      "file": "cqia/core/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/core/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/core/__init___test.py'), WindowsPath('cqia/core/test___init__.py'), WindowsPath('cqia/core/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/core/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/core/__init___test.py'), WindowsPath('cqia/core/test___init__.py'), WindowsPath('cqia/core/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/core/config.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/core/config.py",
+      "file": "cqia/core/config.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_config.py'), WindowsPath('tests/cqia/core/test_config.py'), WindowsPath('tests/config_test.py'), WindowsPath('tests/cqia/core/config_test.py'), WindowsPath('cqia/core/test_config.py'), WindowsPath('cqia/core/config_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_config.py'), WindowsPath('tests/cqia/core/test_config.py'), WindowsPath('tests/config_test.py'), WindowsPath('tests/cqia/core/config_test.py'), WindowsPath('cqia/core/test_config.py'), WindowsPath('cqia/core/config_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/ingestion/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/ingestion/__init__.py",
+      "file": "cqia/ingestion/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/ingestion/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/ingestion/__init___test.py'), WindowsPath('cqia/ingestion/test___init__.py'), WindowsPath('cqia/ingestion/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/ingestion/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/ingestion/__init___test.py'), WindowsPath('cqia/ingestion/test___init__.py'), WindowsPath('cqia/ingestion/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/ingestion/walker.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/ingestion/walker.py",
+      "file": "cqia/ingestion/walker.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_walker.py'), WindowsPath('tests/cqia/ingestion/test_walker.py'), WindowsPath('tests/walker_test.py'), WindowsPath('tests/cqia/ingestion/walker_test.py'), WindowsPath('cqia/ingestion/test_walker.py'), WindowsPath('cqia/ingestion/walker_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_walker.py'), WindowsPath('tests/cqia/ingestion/test_walker.py'), WindowsPath('tests/walker_test.py'), WindowsPath('tests/cqia/ingestion/walker_test.py'), WindowsPath('cqia/ingestion/test_walker.py'), WindowsPath('cqia/ingestion/walker_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/integrations/github_pr.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/integrations/github_pr.py",
+      "file": "cqia/integrations/github_pr.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_github_pr.py'), WindowsPath('tests/cqia/integrations/test_github_pr.py'), WindowsPath('tests/github_pr_test.py'), WindowsPath('tests/cqia/integrations/github_pr_test.py'), WindowsPath('cqia/integrations/test_github_pr.py'), WindowsPath('cqia/integrations/github_pr_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_github_pr.py'), WindowsPath('tests/cqia/integrations/test_github_pr.py'), WindowsPath('tests/github_pr_test.py'), WindowsPath('tests/cqia/integrations/github_pr_test.py'), WindowsPath('cqia/integrations/test_github_pr.py'), WindowsPath('cqia/integrations/github_pr_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/parsing/imports.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/parsing/imports.py",
+      "file": "cqia/parsing/imports.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_imports.py'), WindowsPath('tests/cqia/parsing/test_imports.py'), WindowsPath('tests/imports_test.py'), WindowsPath('tests/cqia/parsing/imports_test.py'), WindowsPath('cqia/parsing/test_imports.py'), WindowsPath('cqia/parsing/imports_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_imports.py'), WindowsPath('tests/cqia/parsing/test_imports.py'), WindowsPath('tests/imports_test.py'), WindowsPath('tests/cqia/parsing/imports_test.py'), WindowsPath('cqia/parsing/test_imports.py'), WindowsPath('cqia/parsing/imports_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/parsing/ir.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/parsing/ir.py",
+      "file": "cqia/parsing/ir.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_ir.py'), WindowsPath('tests/cqia/parsing/test_ir.py'), WindowsPath('tests/ir_test.py'), WindowsPath('tests/cqia/parsing/ir_test.py'), WindowsPath('cqia/parsing/test_ir.py'), WindowsPath('cqia/parsing/ir_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_ir.py'), WindowsPath('tests/cqia/parsing/test_ir.py'), WindowsPath('tests/ir_test.py'), WindowsPath('tests/cqia/parsing/ir_test.py'), WindowsPath('cqia/parsing/test_ir.py'), WindowsPath('cqia/parsing/ir_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/parsing/python_parser.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/parsing/python_parser.py",
+      "file": "cqia/parsing/python_parser.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_python_parser.py'), WindowsPath('tests/cqia/parsing/test_python_parser.py'), WindowsPath('tests/python_parser_test.py'), WindowsPath('tests/cqia/parsing/python_parser_test.py'), WindowsPath('cqia/parsing/test_python_parser.py'), WindowsPath('cqia/parsing/python_parser_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_python_parser.py'), WindowsPath('tests/cqia/parsing/test_python_parser.py'), WindowsPath('tests/python_parser_test.py'), WindowsPath('tests/cqia/parsing/python_parser_test.py'), WindowsPath('cqia/parsing/test_python_parser.py'), WindowsPath('cqia/parsing/python_parser_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/parsing/ts_parser.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/parsing/ts_parser.py",
+      "file": "cqia/parsing/ts_parser.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_ts_parser.py'), WindowsPath('tests/cqia/parsing/test_ts_parser.py'), WindowsPath('tests/ts_parser_test.py'), WindowsPath('tests/cqia/parsing/ts_parser_test.py'), WindowsPath('cqia/parsing/test_ts_parser.py'), WindowsPath('cqia/parsing/ts_parser_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_ts_parser.py'), WindowsPath('tests/cqia/parsing/test_ts_parser.py'), WindowsPath('tests/ts_parser_test.py'), WindowsPath('tests/cqia/parsing/ts_parser_test.py'), WindowsPath('cqia/parsing/test_ts_parser.py'), WindowsPath('cqia/parsing/ts_parser_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/presets/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/presets/__init__.py",
+      "file": "cqia/presets/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/presets/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/presets/__init___test.py'), WindowsPath('cqia/presets/test___init__.py'), WindowsPath('cqia/presets/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/presets/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/presets/__init___test.py'), WindowsPath('cqia/presets/test___init__.py'), WindowsPath('cqia/presets/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/qa/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/qa/__init__.py",
+      "file": "cqia/qa/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/qa/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/qa/__init___test.py'), WindowsPath('cqia/qa/test___init__.py'), WindowsPath('cqia/qa/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/qa/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/qa/__init___test.py'), WindowsPath('cqia/qa/test___init__.py'), WindowsPath('cqia/qa/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/qa/artifacts.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/qa/artifacts.py",
+      "file": "cqia/qa/artifacts.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_artifacts.py'), WindowsPath('tests/cqia/qa/test_artifacts.py'), WindowsPath('tests/artifacts_test.py'), WindowsPath('tests/cqia/qa/artifacts_test.py'), WindowsPath('cqia/qa/test_artifacts.py'), WindowsPath('cqia/qa/artifacts_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_artifacts.py'), WindowsPath('tests/cqia/qa/test_artifacts.py'), WindowsPath('tests/artifacts_test.py'), WindowsPath('tests/cqia/qa/artifacts_test.py'), WindowsPath('cqia/qa/test_artifacts.py'), WindowsPath('cqia/qa/artifacts_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/qa/chain.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/qa/chain.py",
+      "file": "cqia/qa/chain.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_chain.py'), WindowsPath('tests/cqia/qa/test_chain.py'), WindowsPath('tests/chain_test.py'), WindowsPath('tests/cqia/qa/chain_test.py'), WindowsPath('cqia/qa/test_chain.py'), WindowsPath('cqia/qa/chain_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_chain.py'), WindowsPath('tests/cqia/qa/test_chain.py'), WindowsPath('tests/chain_test.py'), WindowsPath('tests/cqia/qa/chain_test.py'), WindowsPath('cqia/qa/test_chain.py'), WindowsPath('cqia/qa/chain_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/qa/prompt.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/qa/prompt.py",
+      "file": "cqia/qa/prompt.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_prompt.py'), WindowsPath('tests/cqia/qa/test_prompt.py'), WindowsPath('tests/prompt_test.py'), WindowsPath('tests/cqia/qa/prompt_test.py'), WindowsPath('cqia/qa/test_prompt.py'), WindowsPath('cqia/qa/prompt_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_prompt.py'), WindowsPath('tests/cqia/qa/test_prompt.py'), WindowsPath('tests/prompt_test.py'), WindowsPath('tests/cqia/qa/prompt_test.py'), WindowsPath('cqia/qa/test_prompt.py'), WindowsPath('cqia/qa/prompt_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/__init__.py",
+      "file": "cqia/rag/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/__init___test.py'), WindowsPath('cqia/rag/test___init__.py'), WindowsPath('cqia/rag/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/__init___test.py'), WindowsPath('cqia/rag/test___init__.py'), WindowsPath('cqia/rag/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/chunking/__init__.py",
+      "file": "cqia/rag/chunking/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/chunking/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/chunking/__init___test.py'), WindowsPath('cqia/rag/chunking/test___init__.py'), WindowsPath('cqia/rag/chunking/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/chunking/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/chunking/__init___test.py'), WindowsPath('cqia/rag/chunking/test___init__.py'), WindowsPath('cqia/rag/chunking/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/chunking/ast_chunker.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/chunking/ast_chunker.py",
+      "file": "cqia/rag/chunking/ast_chunker.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_ast_chunker.py'), WindowsPath('tests/cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('tests/ast_chunker_test.py'), WindowsPath('tests/cqia/rag/chunking/ast_chunker_test.py'), WindowsPath('cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('cqia/rag/chunking/ast_chunker_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_ast_chunker.py'), WindowsPath('tests/cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('tests/ast_chunker_test.py'), WindowsPath('tests/cqia/rag/chunking/ast_chunker_test.py'), WindowsPath('cqia/rag/chunking/test_ast_chunker.py'), WindowsPath('cqia/rag/chunking/ast_chunker_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/embeddings/__init__.py",
+      "file": "cqia/rag/embeddings/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/embeddings/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/embeddings/__init___test.py'), WindowsPath('cqia/rag/embeddings/test___init__.py'), WindowsPath('cqia/rag/embeddings/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/embeddings/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/embeddings/__init___test.py'), WindowsPath('cqia/rag/embeddings/test___init__.py'), WindowsPath('cqia/rag/embeddings/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/embeddings/vector_store.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/embeddings/vector_store.py",
+      "file": "cqia/rag/embeddings/vector_store.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_vector_store.py'), WindowsPath('tests/cqia/rag/embeddings/test_vector_store.py'), WindowsPath('tests/vector_store_test.py'), WindowsPath('tests/cqia/rag/embeddings/vector_store_test.py'), WindowsPath('cqia/rag/embeddings/test_vector_store.py'), WindowsPath('cqia/rag/embeddings/vector_store_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_vector_store.py'), WindowsPath('tests/cqia/rag/embeddings/test_vector_store.py'), WindowsPath('tests/vector_store_test.py'), WindowsPath('tests/cqia/rag/embeddings/vector_store_test.py'), WindowsPath('cqia/rag/embeddings/test_vector_store.py'), WindowsPath('cqia/rag/embeddings/vector_store_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/retrieval/__init__.py",
+      "file": "cqia/rag/retrieval/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/retrieval/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/retrieval/__init___test.py'), WindowsPath('cqia/rag/retrieval/test___init__.py'), WindowsPath('cqia/rag/retrieval/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/rag/retrieval/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/rag/retrieval/__init___test.py'), WindowsPath('cqia/rag/retrieval/test___init__.py'), WindowsPath('cqia/rag/retrieval/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/rag/retrieval/smart_retriever.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/rag/retrieval/smart_retriever.py",
+      "file": "cqia/rag/retrieval/smart_retriever.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_smart_retriever.py'), WindowsPath('tests/cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('tests/smart_retriever_test.py'), WindowsPath('tests/cqia/rag/retrieval/smart_retriever_test.py'), WindowsPath('cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('cqia/rag/retrieval/smart_retriever_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_smart_retriever.py'), WindowsPath('tests/cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('tests/smart_retriever_test.py'), WindowsPath('tests/cqia/rag/retrieval/smart_retriever_test.py'), WindowsPath('cqia/rag/retrieval/test_smart_retriever.py'), WindowsPath('cqia/rag/retrieval/smart_retriever_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/reporting/__init__.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/reporting/__init__.py",
+      "file": "cqia/reporting/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/reporting/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/reporting/__init___test.py'), WindowsPath('cqia/reporting/test___init__.py'), WindowsPath('cqia/reporting/__init___test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test___init__.py'), WindowsPath('tests/cqia/reporting/test___init__.py'), WindowsPath('tests/__init___test.py'), WindowsPath('tests/cqia/reporting/__init___test.py'), WindowsPath('cqia/reporting/test___init__.py'), WindowsPath('cqia/reporting/__init___test.py')]"
+      }
+    },
+    {
+      "id": "cqia/reporting/exporters.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/reporting/exporters.py",
+      "file": "cqia/reporting/exporters.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_exporters.py'), WindowsPath('tests/cqia/reporting/test_exporters.py'), WindowsPath('tests/exporters_test.py'), WindowsPath('tests/cqia/reporting/exporters_test.py'), WindowsPath('cqia/reporting/test_exporters.py'), WindowsPath('cqia/reporting/exporters_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_exporters.py'), WindowsPath('tests/cqia/reporting/test_exporters.py'), WindowsPath('tests/exporters_test.py'), WindowsPath('tests/cqia/reporting/exporters_test.py'), WindowsPath('cqia/reporting/test_exporters.py'), WindowsPath('cqia/reporting/exporters_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/reporting/markdown.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/reporting/markdown.py",
+      "file": "cqia/reporting/markdown.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_markdown.py'), WindowsPath('tests/cqia/reporting/test_markdown.py'), WindowsPath('tests/markdown_test.py'), WindowsPath('tests/cqia/reporting/markdown_test.py'), WindowsPath('cqia/reporting/test_markdown.py'), WindowsPath('cqia/reporting/markdown_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_markdown.py'), WindowsPath('tests/cqia/reporting/test_markdown.py'), WindowsPath('tests/markdown_test.py'), WindowsPath('tests/cqia/reporting/markdown_test.py'), WindowsPath('cqia/reporting/test_markdown.py'), WindowsPath('cqia/reporting/markdown_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/reporting/schema.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/reporting/schema.py",
+      "file": "cqia/reporting/schema.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_schema.py'), WindowsPath('tests/cqia/reporting/test_schema.py'), WindowsPath('tests/schema_test.py'), WindowsPath('tests/cqia/reporting/schema_test.py'), WindowsPath('cqia/reporting/test_schema.py'), WindowsPath('cqia/reporting/schema_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_schema.py'), WindowsPath('tests/cqia/reporting/test_schema.py'), WindowsPath('tests/schema_test.py'), WindowsPath('tests/cqia/reporting/schema_test.py'), WindowsPath('cqia/reporting/test_schema.py'), WindowsPath('cqia/reporting/schema_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/utils/deps.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/utils/deps.py",
+      "file": "cqia/utils/deps.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_deps.py'), WindowsPath('tests/cqia/utils/test_deps.py'), WindowsPath('tests/deps_test.py'), WindowsPath('tests/cqia/utils/deps_test.py'), WindowsPath('cqia/utils/test_deps.py'), WindowsPath('cqia/utils/deps_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_deps.py'), WindowsPath('tests/cqia/utils/test_deps.py'), WindowsPath('tests/deps_test.py'), WindowsPath('tests/cqia/utils/deps_test.py'), WindowsPath('cqia/utils/test_deps.py'), WindowsPath('cqia/utils/deps_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/web/api.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/web/api.py",
+      "file": "cqia/web/api.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_api.py'), WindowsPath('tests/cqia/web/test_api.py'), WindowsPath('tests/api_test.py'), WindowsPath('tests/cqia/web/api_test.py'), WindowsPath('cqia/web/test_api.py'), WindowsPath('cqia/web/api_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_api.py'), WindowsPath('tests/cqia/web/test_api.py'), WindowsPath('tests/api_test.py'), WindowsPath('tests/cqia/web/api_test.py'), WindowsPath('cqia/web/test_api.py'), WindowsPath('cqia/web/api_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/web/clone.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/web/clone.py",
+      "file": "cqia/web/clone.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_clone.py'), WindowsPath('tests/cqia/web/test_clone.py'), WindowsPath('tests/clone_test.py'), WindowsPath('tests/cqia/web/clone_test.py'), WindowsPath('cqia/web/test_clone.py'), WindowsPath('cqia/web/clone_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_clone.py'), WindowsPath('tests/cqia/web/test_clone.py'), WindowsPath('tests/clone_test.py'), WindowsPath('tests/cqia/web/clone_test.py'), WindowsPath('cqia/web/test_clone.py'), WindowsPath('cqia/web/clone_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/web/service.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/web/service.py",
+      "file": "cqia/web/service.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_service.py'), WindowsPath('tests/cqia/web/test_service.py'), WindowsPath('tests/service_test.py'), WindowsPath('tests/cqia/web/service_test.py'), WindowsPath('cqia/web/test_service.py'), WindowsPath('cqia/web/service_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_service.py'), WindowsPath('tests/cqia/web/test_service.py'), WindowsPath('tests/service_test.py'), WindowsPath('tests/cqia/web/service_test.py'), WindowsPath('cqia/web/test_service.py'), WindowsPath('cqia/web/service_test.py')]"
+      }
+    },
+    {
+      "id": "cqia/web/ui_app.py::testgap",
+      "category": "testing",
+      "severity": "P1",
+      "score": 0.7,
+      "title": "No test file found for cqia/web/ui_app.py",
+      "file": "cqia/web/ui_app.py",
+      "start_line": 1,
+      "end_line": 1,
+      "hint": "- Create [WindowsPath('tests/test_ui_app.py'), WindowsPath('tests/cqia/web/test_ui_app.py'), WindowsPath('tests/ui_app_test.py'), WindowsPath('tests/cqia/web/ui_app_test.py'), WindowsPath('cqia/web/test_ui_app.py'), WindowsPath('cqia/web/ui_app_test.py')] and add at least one unit test; use pytest fixtures and descriptive names.",
+      "extra": {
+        "expected_test": "[WindowsPath('tests/test_ui_app.py'), WindowsPath('tests/cqia/web/test_ui_app.py'), WindowsPath('tests/ui_app_test.py'), WindowsPath('tests/cqia/web/ui_app_test.py'), WindowsPath('cqia/web/test_ui_app.py'), WindowsPath('cqia/web/ui_app_test.py')]"
+      }
+    }
+  ],
+  "dependencies": {
+    "fan_in": {
+      "flow": 0,
+      "['cqia', 'agent', 'graph', 'state']": 1,
+      "['__future__']": 33,
+      "['cqia', 'agent', 'graph', 'nodes']": 1,
+      "['langgraph', 'graph']": 1,
+      "['typing']": 28,
+      "nodes": 0,
+      "['cqia', 'rag', 'embeddings', 'vector_store']": 2,
+      "['cqia', 'ingestion', 'walker']": 6,
+      "['cqia', 'rag', 'retrieval', 'smart_retriever']": 2,
+      "['cqia', 'reporting', 'markdown']": 4,
+      "['cqia', 'reporting', 'exporters']": 4,
+      "['cqia', 'analysis', 'severity']": 6,
+      "['cqia', 'presets']": 4,
+      "['cqia', 'analysis', 'runner']": 4,
+      "['cqia', 'rag', 'chunking', 'ast_chunker']": 2,
+      "['langchain_core', 'messages']": 3,
+      "['cqia', 'utils', 'deps']": 2,
+      "['langchain_core', 'runnables']": 1,
+      "['pathlib']": 21,
+      "state": 0,
+      "['typing_extensions']": 1,
+      "dependency_graph": 0,
+      "['dataclasses']": 12,
+      "['networkx']": 3,
+      "['json']": 5,
+      "complexity": 0,
+      "['cqia', 'parsing', 'ir']": 8,
+      "duplication": 0,
+      "['time']": 2,
+      "['re']": 6,
+      "performance": 0,
+      "['ast']": 6,
+      "security": 0,
+      "testing_docs": 0,
+      "runner": 0,
+      "['cqia', 'analysis', 'detectors', 'complexity']": 2,
+      "['cqia', 'analysis', 'detectors', 'duplication']": 2,
+      "['cqia', 'parsing', 'imports']": 1,
+      "['cqia', 'parsing', 'ts_parser']": 1,
+      "['cqia', 'analysis', 'detectors', 'security']": 2,
+      "['cqia', 'analysis', 'detectors', 'performance']": 2,
+      "['cqia', 'parsing', 'python_parser']": 1,
+      "['cqia', 'analysis', 'detectors', 'testing_docs']": 2,
+      "['cqia', 'analysis', 'dependency_graph']": 2,
+      "severity": 0,
+      "main": 0,
+      "['rich', 'console']": 1,
+      "['dotenv']": 2,
+      "['statistics']": 1,
+      "['cqia', 'qa', 'artifacts']": 1,
+      "['uvicorn']": 1,
+      "['cqia', 'integrations', 'github_pr']": 1,
+      "['cqia', 'core', 'config']": 1,
+      "['rich', 'table']": 1,
+      "['typer']": 1,
+      "['cqia', 'agent', 'graph', 'flow']": 1,
+      "['cqia', 'qa', 'chain']": 1,
+      "['sys']": 1,
+      "['subprocess']": 2,
+      "config": 0,
+      "walker": 0,
+      "['os']": 4,
+      "['fnmatch']": 1,
+      "['pathspec']": 1,
+      "github_pr": 0,
+      "['requests']": 2,
+      "imports": 0,
+      "ir": 0,
+      "python_parser": 0,
+      "ts_parser": 0,
+      "['tree_sitter']": 1,
+      "['cqia', 'vendor', 'ts_languages']": 1,
+      "__init__": 0,
+      "['yaml']": 1,
+      "artifacts": 0,
+      "chain": 0,
+      "['cqia', 'qa', 'prompt']": 1,
+      "['langchain_core', 'prompts']": 1,
+      "['langchain_core', 'output_parsers']": 1,
+      "['langchain_groq']": 1,
+      "prompt": 0,
+      "ast_chunker": 0,
+      "['langchain', 'text_splitter']": 1,
+      "['langchain', 'docstore', 'document']": 2,
+      "vector_store": 0,
+      "['langchain_huggingface']": 1,
+      "['langchain_chroma']": 1,
+      "['chromadb', 'config']": 1,
+      "['chromadb']": 1,
+      "smart_retriever": 0,
+      "['langchain_core', 'callbacks', 'manager']": 1,
+      "['langchain_core', 'documents']": 1,
+      "['pydantic']": 3,
+      "['langchain_core', 'retrievers']": 1,
+      "exporters": 0,
+      "['cqia', 'reporting', 'schema']": 1,
+      "markdown": 0,
+      "schema": 0,
+      "deps": 0,
+      "clone": 0,
+      "['stat']": 1,
+      "['shutil']": 1,
+      "service": 0,
+      "['cqia', 'web', 'clone']": 2,
+      "['fastapi', 'middleware', 'cors']": 1,
+      "['fastapi']": 1,
+      "ui_app": 0,
+      "['streamlit']": 1
+    },
+    "fan_out": {
+      "flow": 5,
+      "['cqia', 'agent', 'graph', 'state']": 0,
+      "['__future__']": 0,
+      "['cqia', 'agent', 'graph', 'nodes']": 0,
+      "['langgraph', 'graph']": 0,
+      "['typing']": 0,
+      "nodes": 15,
+      "['cqia', 'rag', 'embeddings', 'vector_store']": 0,
+      "['cqia', 'ingestion', 'walker']": 0,
+      "['cqia', 'rag', 'retrieval', 'smart_retriever']": 0,
+      "['cqia', 'reporting', 'markdown']": 0,
+      "['cqia', 'reporting', 'exporters']": 0,
+      "['cqia', 'analysis', 'severity']": 0,
+      "['cqia', 'presets']": 0,
+      "['cqia', 'analysis', 'runner']": 0,
+      "['cqia', 'rag', 'chunking', 'ast_chunker']": 0,
+      "['langchain_core', 'messages']": 0,
+      "['cqia', 'utils', 'deps']": 0,
+      "['langchain_core', 'runnables']": 0,
+      "['pathlib']": 0,
+      "state": 4,
+      "['typing_extensions']": 0,
+      "dependency_graph": 5,
+      "['dataclasses']": 0,
+      "['networkx']": 0,
+      "['json']": 0,
+      "complexity": 4,
+      "['cqia', 'parsing', 'ir']": 0,
+      "duplication": 6,
+      "['time']": 0,
+      "['re']": 0,
+      "performance": 6,
+      "['ast']": 0,
+      "security": 6,
+      "testing_docs": 7,
+      "runner": 18,
+      "['cqia', 'analysis', 'detectors', 'complexity']": 0,
+      "['cqia', 'analysis', 'detectors', 'duplication']": 0,
+      "['cqia', 'parsing', 'imports']": 0,
+      "['cqia', 'parsing', 'ts_parser']": 0,
+      "['cqia', 'analysis', 'detectors', 'security']": 0,
+      "['cqia', 'analysis', 'detectors', 'performance']": 0,
+      "['cqia', 'parsing', 'python_parser']": 0,
+      "['cqia', 'analysis', 'detectors', 'testing_docs']": 0,
+      "['cqia', 'analysis', 'dependency_graph']": 0,
+      "severity": 3,
+      "main": 26,
+      "['rich', 'console']": 0,
+      "['dotenv']": 0,
+      "['statistics']": 0,
+      "['cqia', 'qa', 'artifacts']": 0,
+      "['uvicorn']": 0,
+      "['cqia', 'integrations', 'github_pr']": 0,
+      "['cqia', 'core', 'config']": 0,
+      "['rich', 'table']": 0,
+      "['typer']": 0,
+      "['cqia', 'agent', 'graph', 'flow']": 0,
+      "['cqia', 'qa', 'chain']": 0,
+      "['sys']": 0,
+      "['subprocess']": 0,
+      "config": 4,
+      "walker": 7,
+      "['os']": 0,
+      "['fnmatch']": 0,
+      "['pathspec']": 0,
+      "github_pr": 5,
+      "['requests']": 0,
+      "imports": 5,
+      "ir": 4,
+      "python_parser": 5,
+      "ts_parser": 6,
+      "['tree_sitter']": 0,
+      "['cqia', 'vendor', 'ts_languages']": 0,
+      "__init__": 3,
+      "['yaml']": 0,
+      "artifacts": 3,
+      "chain": 7,
+      "['cqia', 'qa', 'prompt']": 0,
+      "['langchain_core', 'prompts']": 0,
+      "['langchain_core', 'output_parsers']": 0,
+      "['langchain_groq']": 0,
+      "prompt": 1,
+      "ast_chunker": 8,
+      "['langchain', 'text_splitter']": 0,
+      "['langchain', 'docstore', 'document']": 0,
+      "vector_store": 8,
+      "['langchain_huggingface']": 0,
+      "['langchain_chroma']": 0,
+      "['chromadb', 'config']": 0,
+      "['chromadb']": 0,
+      "smart_retriever": 7,
+      "['langchain_core', 'callbacks', 'manager']": 0,
+      "['langchain_core', 'documents']": 0,
+      "['pydantic']": 0,
+      "['langchain_core', 'retrievers']": 0,
+      "exporters": 6,
+      "['cqia', 'reporting', 'schema']": 0,
+      "markdown": 10,
+      "schema": 3,
+      "deps": 2,
+      "clone": 9,
+      "['stat']": 0,
+      "['shutil']": 0,
+      "service": 13,
+      "['cqia', 'web', 'clone']": 0,
+      "['fastapi', 'middleware', 'cors']": 0,
+      "['fastapi']": 0,
+      "ui_app": 13,
+      "['streamlit']": 0
+    },
+    "cycles": [],
+    "top_fan_in": [
+      [
+        "['__future__']",
+        33
+      ],
+      [
+        "['typing']",
+        28
+      ],
+      [
+        "['pathlib']",
+        21
+      ],
+      [
+        "['dataclasses']",
+        12
+      ],
+      [
+        "['cqia', 'parsing', 'ir']",
+        8
+      ],
+      [
+        "['cqia', 'ingestion', 'walker']",
+        6
+      ],
+      [
+        "['cqia', 'analysis', 'severity']",
+        6
+      ],
+      [
+        "['re']",
+        6
+      ],
+      [
+        "['ast']",
+        6
+      ],
+      [
+        "['json']",
+        5
+      ]
+    ],
+    "top_fan_out": [
+      [
+        "main",
+        26
+      ],
+      [
+        "runner",
+        18
+      ],
+      [
+        "nodes",
+        15
+      ],
+      [
+        "service",
+        13
+      ],
+      [
+        "ui_app",
+        13
+      ],
+      [
+        "markdown",
+        10
+      ],
+      [
+        "clone",
+        9
+      ],
+      [
+        "ast_chunker",
+        8
+      ],
+      [
+        "vector_store",
+        8
+      ],
+      [
+        "testing_docs",
+        7
+      ]
+    ]
+  }
+}

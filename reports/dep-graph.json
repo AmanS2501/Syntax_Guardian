@@ -1,0 +1,1269 @@
+{
+  "nodes": [
+    {
+      "id": "flow"
+    },
+    {
+      "id": "['cqia', 'agent', 'graph', 'state']"
+    },
+    {
+      "id": "['__future__']"
+    },
+    {
+      "id": "['cqia', 'agent', 'graph', 'nodes']"
+    },
+    {
+      "id": "['langgraph', 'graph']"
+    },
+    {
+      "id": "['typing']"
+    },
+    {
+      "id": "nodes"
+    },
+    {
+      "id": "['cqia', 'rag', 'embeddings', 'vector_store']"
+    },
+    {
+      "id": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "id": "['cqia', 'rag', 'retrieval', 'smart_retriever']"
+    },
+    {
+      "id": "['cqia', 'reporting', 'markdown']"
+    },
+    {
+      "id": "['cqia', 'reporting', 'exporters']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "id": "['cqia', 'presets']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'runner']"
+    },
+    {
+      "id": "['cqia', 'rag', 'chunking', 'ast_chunker']"
+    },
+    {
+      "id": "['langchain_core', 'messages']"
+    },
+    {
+      "id": "['cqia', 'utils', 'deps']"
+    },
+    {
+      "id": "['langchain_core', 'runnables']"
+    },
+    {
+      "id": "['pathlib']"
+    },
+    {
+      "id": "state"
+    },
+    {
+      "id": "['typing_extensions']"
+    },
+    {
+      "id": "dependency_graph"
+    },
+    {
+      "id": "['dataclasses']"
+    },
+    {
+      "id": "['networkx']"
+    },
+    {
+      "id": "['json']"
+    },
+    {
+      "id": "complexity"
+    },
+    {
+      "id": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "id": "duplication"
+    },
+    {
+      "id": "['time']"
+    },
+    {
+      "id": "['re']"
+    },
+    {
+      "id": "performance"
+    },
+    {
+      "id": "['ast']"
+    },
+    {
+      "id": "security"
+    },
+    {
+      "id": "testing_docs"
+    },
+    {
+      "id": "runner"
+    },
+    {
+      "id": "['cqia', 'analysis', 'detectors', 'complexity']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'detectors', 'duplication']"
+    },
+    {
+      "id": "['cqia', 'parsing', 'imports']"
+    },
+    {
+      "id": "['cqia', 'parsing', 'ts_parser']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'detectors', 'security']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'detectors', 'performance']"
+    },
+    {
+      "id": "['cqia', 'parsing', 'python_parser']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'detectors', 'testing_docs']"
+    },
+    {
+      "id": "['cqia', 'analysis', 'dependency_graph']"
+    },
+    {
+      "id": "severity"
+    },
+    {
+      "id": "main"
+    },
+    {
+      "id": "['rich', 'console']"
+    },
+    {
+      "id": "['dotenv']"
+    },
+    {
+      "id": "['statistics']"
+    },
+    {
+      "id": "['cqia', 'qa', 'artifacts']"
+    },
+    {
+      "id": "['uvicorn']"
+    },
+    {
+      "id": "['cqia', 'integrations', 'github_pr']"
+    },
+    {
+      "id": "['cqia', 'core', 'config']"
+    },
+    {
+      "id": "['rich', 'table']"
+    },
+    {
+      "id": "['typer']"
+    },
+    {
+      "id": "['cqia', 'agent', 'graph', 'flow']"
+    },
+    {
+      "id": "['cqia', 'qa', 'chain']"
+    },
+    {
+      "id": "['sys']"
+    },
+    {
+      "id": "['subprocess']"
+    },
+    {
+      "id": "config"
+    },
+    {
+      "id": "walker"
+    },
+    {
+      "id": "['os']"
+    },
+    {
+      "id": "['fnmatch']"
+    },
+    {
+      "id": "['pathspec']"
+    },
+    {
+      "id": "github_pr"
+    },
+    {
+      "id": "['requests']"
+    },
+    {
+      "id": "imports"
+    },
+    {
+      "id": "ir"
+    },
+    {
+      "id": "python_parser"
+    },
+    {
+      "id": "ts_parser"
+    },
+    {
+      "id": "['tree_sitter']"
+    },
+    {
+      "id": "['cqia', 'vendor', 'ts_languages']"
+    },
+    {
+      "id": "__init__"
+    },
+    {
+      "id": "['yaml']"
+    },
+    {
+      "id": "artifacts"
+    },
+    {
+      "id": "chain"
+    },
+    {
+      "id": "['cqia', 'qa', 'prompt']"
+    },
+    {
+      "id": "['langchain_core', 'prompts']"
+    },
+    {
+      "id": "['langchain_core', 'output_parsers']"
+    },
+    {
+      "id": "['langchain_groq']"
+    },
+    {
+      "id": "prompt"
+    },
+    {
+      "id": "ast_chunker"
+    },
+    {
+      "id": "['langchain', 'text_splitter']"
+    },
+    {
+      "id": "['langchain', 'docstore', 'document']"
+    },
+    {
+      "id": "vector_store"
+    },
+    {
+      "id": "['langchain_huggingface']"
+    },
+    {
+      "id": "['langchain_chroma']"
+    },
+    {
+      "id": "['chromadb', 'config']"
+    },
+    {
+      "id": "['chromadb']"
+    },
+    {
+      "id": "smart_retriever"
+    },
+    {
+      "id": "['langchain_core', 'callbacks', 'manager']"
+    },
+    {
+      "id": "['langchain_core', 'documents']"
+    },
+    {
+      "id": "['pydantic']"
+    },
+    {
+      "id": "['langchain_core', 'retrievers']"
+    },
+    {
+      "id": "exporters"
+    },
+    {
+      "id": "['cqia', 'reporting', 'schema']"
+    },
+    {
+      "id": "markdown"
+    },
+    {
+      "id": "schema"
+    },
+    {
+      "id": "deps"
+    },
+    {
+      "id": "clone"
+    },
+    {
+      "id": "['stat']"
+    },
+    {
+      "id": "['shutil']"
+    },
+    {
+      "id": "service"
+    },
+    {
+      "id": "['cqia', 'web', 'clone']"
+    },
+    {
+      "id": "['fastapi', 'middleware', 'cors']"
+    },
+    {
+      "id": "['fastapi']"
+    },
+    {
+      "id": "ui_app"
+    },
+    {
+      "id": "['streamlit']"
+    }
+  ],
+  "edges": [
+    {
+      "source": "flow",
+      "target": "['cqia', 'agent', 'graph', 'state']"
+    },
+    {
+      "source": "flow",
+      "target": "['__future__']"
+    },
+    {
+      "source": "flow",
+      "target": "['cqia', 'agent', 'graph', 'nodes']"
+    },
+    {
+      "source": "flow",
+      "target": "['langgraph', 'graph']"
+    },
+    {
+      "source": "flow",
+      "target": "['typing']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'rag', 'embeddings', 'vector_store']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'rag', 'retrieval', 'smart_retriever']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'reporting', 'markdown']"
+    },
+    {
+      "source": "nodes",
+      "target": "['__future__']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'reporting', 'exporters']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'presets']"
+    },
+    {
+      "source": "nodes",
+      "target": "['typing']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'analysis', 'runner']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'rag', 'chunking', 'ast_chunker']"
+    },
+    {
+      "source": "nodes",
+      "target": "['langchain_core', 'messages']"
+    },
+    {
+      "source": "nodes",
+      "target": "['cqia', 'utils', 'deps']"
+    },
+    {
+      "source": "nodes",
+      "target": "['langchain_core', 'runnables']"
+    },
+    {
+      "source": "nodes",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "state",
+      "target": "['langchain_core', 'messages']"
+    },
+    {
+      "source": "state",
+      "target": "['__future__']"
+    },
+    {
+      "source": "state",
+      "target": "['typing']"
+    },
+    {
+      "source": "state",
+      "target": "['typing_extensions']"
+    },
+    {
+      "source": "dependency_graph",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "dependency_graph",
+      "target": "['networkx']"
+    },
+    {
+      "source": "dependency_graph",
+      "target": "['__future__']"
+    },
+    {
+      "source": "dependency_graph",
+      "target": "['typing']"
+    },
+    {
+      "source": "dependency_graph",
+      "target": "['json']"
+    },
+    {
+      "source": "complexity",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "complexity",
+      "target": "['__future__']"
+    },
+    {
+      "source": "complexity",
+      "target": "['typing']"
+    },
+    {
+      "source": "complexity",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "duplication",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "duplication",
+      "target": "['__future__']"
+    },
+    {
+      "source": "duplication",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "duplication",
+      "target": "['typing']"
+    },
+    {
+      "source": "duplication",
+      "target": "['time']"
+    },
+    {
+      "source": "duplication",
+      "target": "['re']"
+    },
+    {
+      "source": "performance",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "performance",
+      "target": "['ast']"
+    },
+    {
+      "source": "performance",
+      "target": "['__future__']"
+    },
+    {
+      "source": "performance",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "performance",
+      "target": "['typing']"
+    },
+    {
+      "source": "performance",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "security",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "security",
+      "target": "['ast']"
+    },
+    {
+      "source": "security",
+      "target": "['__future__']"
+    },
+    {
+      "source": "security",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "security",
+      "target": "['typing']"
+    },
+    {
+      "source": "security",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['ast']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['__future__']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['typing']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['re']"
+    },
+    {
+      "source": "testing_docs",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "runner",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'detectors', 'complexity']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'detectors', 'duplication']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "runner",
+      "target": "['networkx']"
+    },
+    {
+      "source": "runner",
+      "target": "['__future__']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'parsing', 'imports']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "runner",
+      "target": "['typing']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'parsing', 'ts_parser']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'detectors', 'security']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'detectors', 'performance']"
+    },
+    {
+      "source": "runner",
+      "target": "['json']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'parsing', 'python_parser']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'detectors', 'testing_docs']"
+    },
+    {
+      "source": "runner",
+      "target": "['cqia', 'analysis', 'dependency_graph']"
+    },
+    {
+      "source": "runner",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "severity",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "severity",
+      "target": "['__future__']"
+    },
+    {
+      "source": "severity",
+      "target": "['typing']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'rag', 'embeddings', 'vector_store']"
+    },
+    {
+      "source": "main",
+      "target": "['rich', 'console']"
+    },
+    {
+      "source": "main",
+      "target": "['dotenv']"
+    },
+    {
+      "source": "main",
+      "target": "['statistics']"
+    },
+    {
+      "source": "main",
+      "target": "['__future__']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'qa', 'artifacts']"
+    },
+    {
+      "source": "main",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "main",
+      "target": "['uvicorn']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'presets']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'integrations', 'github_pr']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'analysis', 'runner']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'core', 'config']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "main",
+      "target": "['langchain_core', 'messages']"
+    },
+    {
+      "source": "main",
+      "target": "['rich', 'table']"
+    },
+    {
+      "source": "main",
+      "target": "['typer']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'utils', 'deps']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'rag', 'retrieval', 'smart_retriever']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'reporting', 'markdown']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'agent', 'graph', 'flow']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'qa', 'chain']"
+    },
+    {
+      "source": "main",
+      "target": "['sys']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'rag', 'chunking', 'ast_chunker']"
+    },
+    {
+      "source": "main",
+      "target": "['subprocess']"
+    },
+    {
+      "source": "main",
+      "target": "['cqia', 'reporting', 'exporters']"
+    },
+    {
+      "source": "config",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "config",
+      "target": "['__future__']"
+    },
+    {
+      "source": "config",
+      "target": "['typing']"
+    },
+    {
+      "source": "config",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "walker",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "walker",
+      "target": "['os']"
+    },
+    {
+      "source": "walker",
+      "target": "['__future__']"
+    },
+    {
+      "source": "walker",
+      "target": "['fnmatch']"
+    },
+    {
+      "source": "walker",
+      "target": "['typing']"
+    },
+    {
+      "source": "walker",
+      "target": "['pathspec']"
+    },
+    {
+      "source": "walker",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "github_pr",
+      "target": "['os']"
+    },
+    {
+      "source": "github_pr",
+      "target": "['__future__']"
+    },
+    {
+      "source": "github_pr",
+      "target": "['requests']"
+    },
+    {
+      "source": "github_pr",
+      "target": "['typing']"
+    },
+    {
+      "source": "github_pr",
+      "target": "['json']"
+    },
+    {
+      "source": "imports",
+      "target": "['ast']"
+    },
+    {
+      "source": "imports",
+      "target": "['__future__']"
+    },
+    {
+      "source": "imports",
+      "target": "['typing']"
+    },
+    {
+      "source": "imports",
+      "target": "['re']"
+    },
+    {
+      "source": "imports",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "ir",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "ir",
+      "target": "['__future__']"
+    },
+    {
+      "source": "ir",
+      "target": "['typing']"
+    },
+    {
+      "source": "ir",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "python_parser",
+      "target": "['ast']"
+    },
+    {
+      "source": "python_parser",
+      "target": "['__future__']"
+    },
+    {
+      "source": "python_parser",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "python_parser",
+      "target": "['typing']"
+    },
+    {
+      "source": "python_parser",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['tree_sitter']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['__future__']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['cqia', 'parsing', 'ir']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['typing']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['cqia', 'vendor', 'ts_languages']"
+    },
+    {
+      "source": "ts_parser",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "__init__",
+      "target": "['__future__']"
+    },
+    {
+      "source": "__init__",
+      "target": "['yaml']"
+    },
+    {
+      "source": "__init__",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "artifacts",
+      "target": "['__future__']"
+    },
+    {
+      "source": "artifacts",
+      "target": "['typing']"
+    },
+    {
+      "source": "artifacts",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "chain",
+      "target": "['dotenv']"
+    },
+    {
+      "source": "chain",
+      "target": "['__future__']"
+    },
+    {
+      "source": "chain",
+      "target": "['typing']"
+    },
+    {
+      "source": "chain",
+      "target": "['cqia', 'qa', 'prompt']"
+    },
+    {
+      "source": "chain",
+      "target": "['langchain_core', 'prompts']"
+    },
+    {
+      "source": "chain",
+      "target": "['langchain_core', 'output_parsers']"
+    },
+    {
+      "source": "chain",
+      "target": "['langchain_groq']"
+    },
+    {
+      "source": "prompt",
+      "target": "['__future__']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['dataclasses']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['ast']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['langchain', 'text_splitter']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['__future__']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['typing']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['langchain', 'docstore', 'document']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['re']"
+    },
+    {
+      "source": "ast_chunker",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['langchain_huggingface']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['langchain_chroma']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['__future__']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['chromadb', 'config']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['typing']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['langchain', 'docstore', 'document']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['chromadb']"
+    },
+    {
+      "source": "vector_store",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['langchain_core', 'callbacks', 'manager']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['__future__']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['langchain_core', 'documents']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['typing']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['pydantic']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['langchain_core', 'retrievers']"
+    },
+    {
+      "source": "smart_retriever",
+      "target": "['re']"
+    },
+    {
+      "source": "exporters",
+      "target": "['networkx']"
+    },
+    {
+      "source": "exporters",
+      "target": "['__future__']"
+    },
+    {
+      "source": "exporters",
+      "target": "['cqia', 'reporting', 'schema']"
+    },
+    {
+      "source": "exporters",
+      "target": "['json']"
+    },
+    {
+      "source": "exporters",
+      "target": "['cqia', 'analysis', 'dependency_graph']"
+    },
+    {
+      "source": "exporters",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'detectors', 'complexity']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'detectors', 'duplication']"
+    },
+    {
+      "source": "markdown",
+      "target": "['__future__']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "markdown",
+      "target": "['typing']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'detectors', 'security']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'detectors', 'performance']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "markdown",
+      "target": "['cqia', 'analysis', 'detectors', 'testing_docs']"
+    },
+    {
+      "source": "markdown",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "schema",
+      "target": "['__future__']"
+    },
+    {
+      "source": "schema",
+      "target": "['typing']"
+    },
+    {
+      "source": "schema",
+      "target": "['pydantic']"
+    },
+    {
+      "source": "deps",
+      "target": "['__future__']"
+    },
+    {
+      "source": "deps",
+      "target": "['typing']"
+    },
+    {
+      "source": "clone",
+      "target": "['os']"
+    },
+    {
+      "source": "clone",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "clone",
+      "target": "['__future__']"
+    },
+    {
+      "source": "clone",
+      "target": "['stat']"
+    },
+    {
+      "source": "clone",
+      "target": "['typing']"
+    },
+    {
+      "source": "clone",
+      "target": "['time']"
+    },
+    {
+      "source": "clone",
+      "target": "['subprocess']"
+    },
+    {
+      "source": "clone",
+      "target": "['shutil']"
+    },
+    {
+      "source": "clone",
+      "target": "['re']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'web', 'clone']"
+    },
+    {
+      "source": "service",
+      "target": "['fastapi', 'middleware', 'cors']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'reporting', 'markdown']"
+    },
+    {
+      "source": "service",
+      "target": "['__future__']"
+    },
+    {
+      "source": "service",
+      "target": "['fastapi']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'presets']"
+    },
+    {
+      "source": "service",
+      "target": "['typing']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'analysis', 'runner']"
+    },
+    {
+      "source": "service",
+      "target": "['pydantic']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "service",
+      "target": "['cqia', 'reporting', 'exporters']"
+    },
+    {
+      "source": "service",
+      "target": "['pathlib']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'ingestion', 'walker']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['os']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'web', 'clone']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['streamlit']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'reporting', 'markdown']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['__future__']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['requests']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'analysis', 'severity']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'presets']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'analysis', 'runner']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['json']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['cqia', 'reporting', 'exporters']"
+    },
+    {
+      "source": "ui_app",
+      "target": "['pathlib']"
+    }
+  ]
+}
