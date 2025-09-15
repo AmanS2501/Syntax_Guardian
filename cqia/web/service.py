@@ -1,9 +1,10 @@
 from __future__ import annotations
-import os
 from pathlib import Path
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 from cqia.web.clone import shallow_clone
 from cqia.presets import load_rules
 from cqia.analysis.severity import override_weights
@@ -19,22 +20,27 @@ from cqia.reporting.markdown import (
 )
 from cqia.reporting.exporters import export_dependency_graph, export_json_report
 from cqia.ingestion.walker import walk_repo
-from fastapi.middleware.cors import CORSMiddleware
 
-ALLOWED_ORIGINS = [
-    "https://syntaxguardian-edysi7c52xdxovi4q976kk.streamlit.app/",
-]
+# 1) Define the FastAPI app FIRST
+app = FastAPI(title="CQIA Web Service")
 
+# 2) Add CORS safely (adjust origins as needed)
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,       # or use allow_origin_regex if subdomains vary
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["POST", "GET", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
-    max_age=3600,
 )
 
-app = FastAPI(title="CQIA Web Service")
+# 3) Health endpoint so Render can verify readiness
+@app.get("/health")
+async def health():
+    return {"ok": True}
+
+# 4) Models and API
+from pydantic import BaseModel
 
 class AnalyzeRequest(BaseModel):
     github_url: str
@@ -89,7 +95,6 @@ def api_analyze(req: AnalyzeRequest):
         dup_threshold=rules.get("duplication", {}).get("similarity_threshold", 0.90),
     )
 
-    # Compose report
     append_top_issues(out_path, results.get("findings_scored", []))
     append_per_category_summary(out_path, results.get("findings_scored", []))
     append_issue_details(out_path, results.get("findings_scored", []))
